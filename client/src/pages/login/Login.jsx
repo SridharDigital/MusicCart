@@ -11,12 +11,12 @@ const Login = () => {
       <Navbar displaySearchBarinMobile={false} />
       <ContentWrapper customClasses={"contentwrapper-login"}>
         <div>
-          <h1 className="login-heading">Welcome</h1>
-          <div className="logo-center">
+          <h1 className="login-signup-heading">Welcome</h1>
+          <div className="form-page-logo">
             <Logo />
           </div>
-          <form className="login-form">
-            <p className="weight-500 signin-text">
+          <form className="login-signup-form">
+            <p className="form-heading">
               Sign in.{" "}
               <span className="form-span-text">
                 <Link
@@ -51,7 +51,7 @@ const Login = () => {
               of use.
             </p>
           </form>
-          <div className="login-new-to-merchant">
+          <div className="login-new-to-musicart">
             <div className="hr-container">
               <hr />
             </div>

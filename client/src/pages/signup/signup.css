@@ -1,0 +1,19 @@
+.consent-msg {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+.already-have-account {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 40px 0;
+}
+
+.signin-option {
+    text-decoration: underline;
+    font-weight: normal;
+}

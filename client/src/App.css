@@ -27,10 +27,6 @@ p {
     color: #000000;
   }
 
-  .weight-500 {
-    font-weight: 500;
-  }
-  
   .primary-button {
     background-color: var(--primary);
     height: 40px;
@@ -40,6 +36,7 @@ p {
     font-size: 16px;
     outline: none;
     border: none;
+    margin-top: 12px;
   }
 
   @media screen and (min-width: 768px) {
@@ -51,6 +48,86 @@ p {
   }
 
 /* Login and Signup Pages */
+
+/* .login-signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+} */
+
+.login-signup-heading {
+  font-weight: 400;
+  margin-top: 32px;
+  color: var(--primary);
+}
+
+@media screen and (min-width:768px) {
+  .login-signup-heading {
+      display: none;
+  }
+}
+
+.login-signup-form {
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid var(--light4);
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .login-signup-form {
+    padding: 16px 28px;
+    border-radius: 22px;
+  }
+}
+
+.form-span-text {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.form-heading {
+  font-size: 18px;
+  font-weight: 500;
+  }
+
+@media screen and (min-width: 768px) {
+  .form-span-text {
+    display: none;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .form-heading {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 12px 0;
+    }
+}
+
+.input-bar {
+  height: 36px;
+  border-radius: 6px;
+  border: 1.2px solid var(--light1);
+  margin-top: 8px;
+  margin-bottom: 13.23px;
+  padding: 0 12px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .input-bar {
+    height: 52px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+}
 
   .label-text {
     font-weight: 500;
@@ -68,12 +145,12 @@ p {
     }
   }
   
-  .logo-center {
+  .form-page-logo {
     display: none;
   }
   
   @media screen and (min-width: 768px) {
-    .logo-center {
+    .form-page-logo {
       display: flex;
       justify-content: center;
     }
