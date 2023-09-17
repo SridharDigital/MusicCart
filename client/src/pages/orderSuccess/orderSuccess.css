@@ -1,0 +1,33 @@
+.success-image {
+    width: 85px;
+    height: 85px;
+}
+
+.order-success-container {
+    text-align: center;
+    border-radius: 11px;
+    border: 3px solid #E3E3E3;
+    box-shadow: 14px 16px 23px 2px rgba(0, 0, 0, 0.11);
+    padding: 80px 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .order-success-container {
+        padding: 80px 60px;
+    }
+
+    .go-to-home-page-button {
+        width: 75%;
+        margin-top: 12px;
+    }
+}
+
+.order-success-heading {
+    font-size: 22px;
+}
+
+.order-success-text {
+    font-size: 16px;
+    color: #969696;
+    margin-bottom: 24px;
+}
