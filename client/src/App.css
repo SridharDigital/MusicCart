@@ -26,3 +26,68 @@ p {
   .text-black {
     color: #000000;
   }
+
+  .weight-500 {
+    font-weight: 500;
+  }
+  
+  .primary-button {
+    background-color: var(--primary);
+    height: 40px;
+    border-radius: 6px;
+    color: var(--white);
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .primary-button  {
+      height: 52px;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+  }
+
+/* Login and Signup Pages */
+
+  .label-text {
+    font-weight: 500;
+  }
+  
+  .privacy-notice {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .privacy-notice {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  
+  .logo-center {
+    display: none;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .logo-center {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  .logo-start {
+    width: 100%;
+    display: none;
+    margin-bottom: 24px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .logo-start {
+      display: flex;
+      justify-content: start;
+    }
+  }

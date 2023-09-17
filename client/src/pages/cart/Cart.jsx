@@ -1,7 +1,12 @@
 import "./cart.css"
+import Navbar from "../../components/navbar/Navbar"
 
 const Cart = () => {
-  return <div>Cart</div>
+  return (
+    <>
+      <Navbar displaySearchBarinMobile={true} />
+    </>
+  )
 }
 
 export default Cart

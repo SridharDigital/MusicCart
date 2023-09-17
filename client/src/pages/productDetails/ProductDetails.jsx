@@ -1,7 +1,12 @@
 import "./productDetails.css"
+import Navbar from "../../components/navbar/Navbar"
 
 const ProductDetails = () => {
-  return <div>ProductDetails</div>
+  return (
+    <>
+      <Navbar displaySearchBarinMobile={true} />
+    </>
+  )
 }
 
 export default ProductDetails

@@ -4,11 +4,11 @@ import searchIcon from "../../../assets/searchIcon.svg"
 
 import "./mobileNavbar.css"
 
-const MobileNavbar = ({ displaySearchBar }) => {
+const MobileNavbar = ({ displaySearchBarinMobile }) => {
   return (
     <div className="mobile-header-container">
       <ContentWrapper>
-        {!displaySearchBar ? (
+        {!displaySearchBarinMobile ? (
           <Logo extraClassNames={"text-white"} />
         ) : (
           <div className="search-bar-container">

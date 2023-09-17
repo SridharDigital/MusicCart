@@ -1,7 +1,12 @@
 import "./orderSuccess.css"
+import Navbar from "../../components/navbar/Navbar"
 
 const OrderSuccess = () => {
-  return <div>OrderSuccess</div>
+  return (
+    <>
+      <Navbar displaySearchBarinMobile={false} />
+    </>
+  )
 }
 
 export default OrderSuccess

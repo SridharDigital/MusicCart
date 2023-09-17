@@ -1,7 +1,12 @@
 import "./checkout.css"
+import Navbar from "../../components/navbar/Navbar"
 
 const Checkout = () => {
-  return <div>Checkout</div>
+  return (
+    <>
+      <Navbar displaySearchBarinMobile={false} />
+    </>
+  )
 }
 
 export default Checkout
