@@ -1,0 +1,26 @@
+.content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .contentwrapper-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order-success-center {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .order-success-center {
+    justify-content: start;
+  }
+}

@@ -1,0 +1,28 @@
+p {
+    font-size: 16px;
+  }
+  
+  input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+           -webkit-appearance: none;
+        }
+  
+  :root {
+    --primary:#2E0052;
+    --black:#000000;
+    --white:#ffffff;
+    --light1:#B6B6B6;
+    --light2:#bdbdbd;
+    --light3:#D9D9D9;
+    --light4:#d0d0d0;
+    --light5:#909090;
+    --secondary:#0066ff; 
+  }
+
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .text-black {
+    color: #000000;
+  }
