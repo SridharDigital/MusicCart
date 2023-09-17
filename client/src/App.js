@@ -1,7 +1,31 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 import "./App.css"
 
+import Home from "./pages/home/Home"
+import Login from "./pages/login/Login"
+import Signup from "./pages/signup/Signup"
+import ProductDetails from "./pages/productDetails/ProductDetails"
+import Cart from "./pages/cart/Cart"
+import Checkout from "./pages/checkout/Checkout"
+import OrderSuccess from "./pages/orderSuccess/OrderSuccess"
+import NotFound from "./pages/notFound/NotFound"
+
 const App = () => {
-  return <div>App</div>
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/product:id" element={<ProductDetails />} />
+        <Route path="/order-success" element={<OrderSuccess />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
