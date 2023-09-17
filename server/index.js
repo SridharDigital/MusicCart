@@ -53,6 +53,7 @@ app.post("/api/login", async (req, res) => {
     console.log({ existingUser })
   } catch (error) {
     console.log({ error })
+    res.status(400)
     res.send({
       status: "FAIL",
       message: error,
