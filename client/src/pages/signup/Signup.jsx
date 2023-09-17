@@ -1,16 +1,19 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { callApi } from "../../utils/callApi"
 
 import "./signup.css"
 import Navbar from "../../components/navbar/Navbar"
 import Logo from "../../components/logo/Logo"
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
 
-const initialUserValue = { name: "", mobile: "", email: "", password: "" }
+const initialUserValues = { name: "", mobile: "", email: "", password: "" }
 
 const Signup = () => {
-  const [user, setUser] = useState(initialUserValue)
+  const [user, setUser] = useState(initialUserValues)
   const [errors, setErrors] = useState({})
+
+  const navigate = useNavigate()
 
   const handleOnInput = (event) => {
     if (event.target.name === "mobile" && user.mobile.length >= 10) {
@@ -37,13 +40,18 @@ const Signup = () => {
     }
   }
 
-  const handleForm = (event) => {
+  const handleForm = async (event) => {
     event.preventDefault()
+    setErrors({})
     const isValidationSuccess = validateForm()
     if (isValidationSuccess) {
-      console.log("Execute Apis")
-    } else {
-      console.log(false)
+      const response = await callApi("POST", "/signup", user)
+      setUser(initialUserValues)
+      if (response.status === "FAIL") {
+        setErrors({ apiError: response.message })
+      } else {
+        navigate("/")
+      }
     }
   }
 
@@ -61,8 +69,6 @@ const Signup = () => {
     })
     return isValidationSuccess
   }
-
-  console.log(user)
 
   return (
     <>
@@ -151,10 +157,16 @@ const Signup = () => {
               Message and data rates may apply.
             </p>
             <button className="primary-button">Continue</button>
+            {errors.apiError && (
+              <p className="form-input-error-msg">{errors.apiError}</p>
+            )}
             <p className="privacy-notice">
               By continuing, you agree to Musicart privacy notice and conditions
               of use.
             </p>
+            {errors.password && (
+              <p className="form-input-error-msg">{errors.password}</p>
+            )}
           </form>
           <p className="already-have-account">
             Already have an account?{" "}

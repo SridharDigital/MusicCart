@@ -1,16 +1,19 @@
-import { Link } from "react-router-dom"
-import { useState, useEffect } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import { useState } from "react"
 
 import "./login.css"
 import Navbar from "../../components/navbar/Navbar"
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
 import Logo from "../../components/logo/Logo"
+import { callApi } from "../../utils/callApi"
 
 const initialUserValues = { emailOrMobile: "", password: "" }
 
 const Login = () => {
   const [user, setUser] = useState(initialUserValues)
   const [errors, setErrors] = useState({})
+
+  const navigate = useNavigate()
 
   const handleOnInput = (event) => {
     setUser((prevUsers) => ({
@@ -33,15 +36,19 @@ const Login = () => {
     }
   }
 
-  const handleForm = (event) => {
-    console.log(event)
+  const handleForm = async (event) => {
+    setErrors({})
     event.preventDefault()
     const isValidationSuccess = validateForm()
     if (isValidationSuccess) {
+      const response = await callApi("POST", "/login", user)
       setUser(initialUserValues)
-      console.log("Execute Apis")
-    } else {
-      console.log(false)
+      if (response.status === "FAIL") {
+        setErrors({ apiError: response.message })
+      } else {
+        console.log("navigation executed")
+        navigate("/")
+      }
     }
   }
 
@@ -57,17 +64,9 @@ const Login = () => {
         }))
       }
     })
-
-    // if (!user.password) {
-    //   isValidationSuccess = false
-    //   setErrors((prevErrors) => ({
-    //     ...prevErrors,
-    //     password: "Field cannot be empty",
-    //   }))
-    // }
     return isValidationSuccess
   }
-  console.log(user)
+
   return (
     <>
       <Navbar displaySearchBarinMobile={false} />
@@ -122,6 +121,9 @@ const Login = () => {
             <button className="primary-button" type="submit">
               Continue
             </button>
+            {errors.apiError && (
+              <p className="form-input-error-msg">{errors.apiError}</p>
+            )}
             <p className="privacy-notice">
               By continuing, you agree to Musicart privacy notice and conditions
               of use.
