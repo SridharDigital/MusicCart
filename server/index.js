@@ -31,9 +31,18 @@ app.post("/api/login", async (req, res) => {
         existingHashedPassword
       )
       if (isPasswordMatch) {
+        const jwtToken = jwt.sign(
+          { existingUser },
+          process.env.JWT_SECRET_KEY,
+          {
+            expiresIn: "15d",
+          }
+        )
+        res.header({ jwtToken })
         res.send({
           status: "SUCCESS",
           message: "Login Successful",
+          // jwtToken,
         })
       } else throw "Incorrect password"
       console.log("The password match status is", isPasswordMatch)
@@ -75,13 +84,19 @@ app.post("/api/signup", async (req, res) => {
       password: hashedPassword,
     }
     await User.create(newUser)
+    const jwtToken = jwt.sign({ newUser }, process.env.JWT_SECRET_KEY, {
+      expiresIn: "15d",
+    })
+    res.header({ jwtToken })
+    res.status(201)
     res.send({
       status: "SUCCESS",
       message: "The Account has been created successfully",
     })
   } catch (error) {
     console.log(error)
-    res.send(error)
+    res.status(400)
+    res.send({ status: "FAIL", message: error })
   }
 })
 
