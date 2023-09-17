@@ -36,7 +36,7 @@ p {
     font-size: 16px;
     outline: none;
     border: none;
-    margin-top: 12px;
+    margin-top: 24px;
   }
 
   @media screen and (min-width: 768px) {
@@ -116,7 +116,7 @@ p {
   border-radius: 6px;
   border: 1.2px solid var(--light1);
   margin-top: 8px;
-  margin-bottom: 13.23px;
+  /* margin-bottom: 13.23px; */
   padding: 0 12px;
   font-size: 18px;
 }
@@ -131,6 +131,7 @@ p {
 
   .label-text {
     font-weight: 500;
+    margin-top: 14px;
   }
   
   .privacy-notice {
@@ -155,6 +156,14 @@ p {
       justify-content: center;
     }
   }
+
+  .form-input-error-msg {
+    color: red;
+    margin: 0px;
+    font-weight: 500;
+  }
+
+  /* ------------------------- */
   
   .logo-start {
     width: 100%;
