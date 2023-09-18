@@ -1,0 +1,117 @@
+.hero-section-container {
+    position: relative;
+    width: 100%;
+    min-height: 30%;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px 0px 20px;
+    border-radius: 7px;
+    background: linear-gradient(90deg, #7286B4 0%, #E794CE 100%);
+}
+
+.hero-content-container {
+    width: 60%;
+}
+
+.hero-section-heading {
+    color: #2E0052;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 0px;
+}
+
+.buy-now-btn {
+    background-color: var(--primary);
+    color: var(--white);
+    min-width: 100px;
+    padding: 6px 24px;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    max-width: 252px;
+    border-radius: 24px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.hero-section-image {
+    position: absolute;
+    height: 120%;
+    right: 0px;
+    bottom: 0px;
+    /* object-fit: cover; */
+}
+
+@media screen and (min-width: 450px) {
+
+    .hero-section-container {
+        padding-left: 25px;
+    }
+    .hero-section-heading {
+        font-size: 22px;
+    }
+    .buy-now-btn {
+        font-size: 13px;
+        min-width: 105px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+
+    .hero-section-container {
+        padding-left: 30px;
+    }
+    .hero-section-heading {
+        font-size: 28px;
+    }
+    .buy-now-btn {
+        font-size: 14px;
+        min-width: 110px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .hero-section-container {
+        padding-left: 40px;
+    }
+    .hero-section-heading {
+        font-size: 32px;
+    }
+    .buy-now-btn {
+        font-size: 15px;
+        min-width: 130px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero-section-container {
+        padding-left: 50px;
+    }
+    .hero-section-heading {
+        font-size: 38px;
+    }
+    .buy-now-btn {
+        font-size: 16px;
+        min-width: 140px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hero-section-container {
+        padding-left: 60px;
+    }
+    .hero-section-heading {
+        font-size: 42px;
+    }
+    .buy-now-btn {
+        font-size: 17px;
+        min-width: 150px;
+    }
+}

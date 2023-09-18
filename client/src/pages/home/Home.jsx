@@ -1,8 +1,15 @@
 import "./home.css"
-import Navbar from "../../components/navbar/Navbar"
+import HeroSection from "./heroSection/HeroSection"
+import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
 
 const Home = () => {
-  return <></>
+  return (
+    <>
+      <ContentWrapper>
+        <HeroSection />
+      </ContentWrapper>
+    </>
+  )
 }
 
 export default Home
