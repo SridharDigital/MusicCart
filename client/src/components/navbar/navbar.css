@@ -1,0 +1,52 @@
+.desktop-navbar-container {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .desktop-navbar-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primary);
+        height: 63px;
+    }
+  }
+
+  .phone-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+
+  .navbar-flex-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-btn {
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  .hr-line-1 {
+    height: 24px;
+    margin: 0 10px;
+    background-color: white;
+    border: 1px solid white;
+  }
+
+  .hr-line-2 {
+    height: 18px;
+    margin: 0 10px;
+    background-color: white;
+    border: 0.5px solid white;
+  }
