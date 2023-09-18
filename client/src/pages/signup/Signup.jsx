@@ -3,7 +3,6 @@ import { useState, useEffect } from "react"
 import { callApi } from "../../utils/callApi"
 
 import "./signup.css"
-import Navbar from "../../components/navbar/Navbar"
 import Logo from "../../components/logo/Logo"
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
 
@@ -72,7 +71,6 @@ const Signup = () => {
 
   return (
     <>
-      <Navbar displaySearchBarinMobile={false} />
       <ContentWrapper customClasses={"contentwrapper-login"}>
         <div>
           <h1 className="login-signup-heading">Welcome</h1>

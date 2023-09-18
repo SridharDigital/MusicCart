@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 import "./login.css"
-import Navbar from "../../components/navbar/Navbar"
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
 import Logo from "../../components/logo/Logo"
 import { callApi } from "../../utils/callApi"
@@ -69,7 +68,6 @@ const Login = () => {
 
   return (
     <>
-      <Navbar displaySearchBarinMobile={false} />
       <ContentWrapper customClasses={"contentwrapper-login"}>
         <div>
           <h1 className="login-signup-heading">Welcome</h1>

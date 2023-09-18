@@ -1,13 +1,11 @@
 import "./orderSuccess.css"
 import successImage from "../../assets/successImage.png"
-import Navbar from "../../components/navbar/Navbar"
 import Logo from "../../components/logo/Logo"
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
 
 const OrderSuccess = () => {
   return (
     <>
-      <Navbar displaySearchBarinMobile={false} />
       <ContentWrapper customClasses={"order-success-center"}>
         <div className="logo-start">
           <Logo />
