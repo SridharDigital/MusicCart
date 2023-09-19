@@ -7,7 +7,7 @@ import ContentWrapper from "../contentWrapper/ContentWrapper"
 const Navbar = ({ displaySearchBarinMobile, history }) => {
   const location = useLocation()
 
-  const navbarDisablePaths = ["/order-success", "/login", "signup"]
+  const navbarDisablePaths = ["/order-success", "/login", "/signup"]
 
   let hideDesktopNavbar = false
   if (navbarDisablePaths.includes(location.pathname)) {

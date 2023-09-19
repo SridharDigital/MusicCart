@@ -20,7 +20,7 @@
     color: #2E0052;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
     margin-top: 0px;
 }
@@ -80,13 +80,19 @@
 
     .hero-section-container {
         padding-left: 40px;
+        margin-top: 24px;
     }
     .hero-section-heading {
         font-size: 32px;
+        margin-bottom: 12px;
+        line-height: 56px;
     }
     .buy-now-btn {
         font-size: 15px;
         min-width: 130px;
+    }
+    .hero-section-image {
+        right: 50px;
     }
 }
 
@@ -113,5 +119,6 @@
     .buy-now-btn {
         font-size: 17px;
         min-width: 150px;
+        padding: 12px;
     }
 }

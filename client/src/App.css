@@ -1,3 +1,10 @@
+/* Breakpoint prefix	Minimum width	CSS
+sm	640px	@media screen and (min-width: 640px) { ... }
+md	768px	@media screen and (min-width: 768px) { ... }
+lg	1024px	@media screen and (min-width: 1024px) { ... }
+xl	1280px	@media screen and (min-width: 1280px) { ... }
+2xl	1536px	@media screen and (min-width: 1536px) { ... } */
+
 p {
     font-size: 16px;
   }
@@ -125,7 +132,7 @@ p {
   .input-bar {
     height: 52px;
     margin-top: 10px;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
   }
 }
 

@@ -1,6 +1,6 @@
 .content-wrapper {
     width: 100%;
-    max-width: 1460px;
+    max-width: 1360px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -20,6 +20,7 @@
 }
 
 .desktop-navbar-container-el {
+  max-width: 1420px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

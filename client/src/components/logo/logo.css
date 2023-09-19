@@ -10,8 +10,12 @@
   
   .logo-text {
     margin-left: 6px;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 21px;
+  }
+
+  .remove-logo-margin {
+    margin: 0px;
   }
   
   @media screen and (min-width: 640px) {
@@ -29,7 +33,6 @@
     .logo-icon {
       width: 56px;
       height: 56px;
-      margin: 22px 0px;
     }
   
     .logo-text {
