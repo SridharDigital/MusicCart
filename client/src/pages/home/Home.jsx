@@ -2,6 +2,7 @@ import "./home.css"
 import HeroSection from "./heroSection/HeroSection"
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
 import DesktopHeader from "../../components/desktopHeader/DesktopHeader"
+import ProductNavbar from "./productNavbar/ProductNavbar"
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <ContentWrapper>
         <div className="home-top-section">
           <HeroSection />
+          <ProductNavbar />
         </div>
       </ContentWrapper>
     </>
