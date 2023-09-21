@@ -6,7 +6,7 @@ import { taxonomies, sortItems } from "../../../constants/constants"
 import TaxonomyItem from "./taxonomyItem/TaxonomyItem"
 
 const ProductNavbar = () => {
-  console.log({ taxonomies })
+  // console.log({ taxonomies })
   return (
     <div className="product-navbar-container">
       <div className="product-search-container">

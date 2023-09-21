@@ -1,3 +1,44 @@
 .home-top-section {
     width: 98%;
 }
+
+.product-grid-view-ul-container {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 12px;
+    flex-direction: row;
+    padding-left: 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .product-grid-view-ul-container {
+        gap: 16px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product-grid-view-ul-container {
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .product-grid-view-ul-container {
+        gap: 30px;
+    }
+}
+
+.product-list-view-ul-container {
+    display: none;
+    flex-direction: column;
+    padding-left: 0px;
+}
+
+@media screen and (min-width: 1024px) {
+    .product-list-view-ul-container {
+        display: flex;
+    }
+}
