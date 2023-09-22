@@ -10,14 +10,14 @@ import ProductListViewItem from "./productListViewItem/ProductListViewItem"
 import { callApi } from "../../utils/callApi"
 
 const initalDisplayConditions = {
-  isFeatured: true,
   isAvailable: true,
   rating: 0,
   color: "",
   company: "",
   type: "",
-  price: 0,
+  price: { min: 0, max: Number.MAX_VALUE },
   title: "",
+  sortBy: { name: 1 },
 }
 
 const Home = () => {
@@ -40,7 +40,7 @@ const Home = () => {
     })()
   }, [])
 
-  console.log("the screen width is", window.screen.width)
+  // console.log("the screen width is", window.screen.width)
 
   return (
     <>
