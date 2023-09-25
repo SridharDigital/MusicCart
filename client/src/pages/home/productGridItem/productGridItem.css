@@ -89,8 +89,22 @@ xl	1280px	@media screen and (min-width: 1280px) { ... }
     
 }
 
-.home-product-cart-icon {
-    position: relative;
-    top: 100px;
+.product-grid-cart-icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
     right: 10px;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 51px;
+    background: #FFF;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+}
+
+.home-product-grid-list-view-cart-icon {
+    fill: green;
+    background-color: red;
 }

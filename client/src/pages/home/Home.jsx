@@ -21,7 +21,7 @@ const initalDisplayConditions = {
 }
 
 const Home = () => {
-  const [displayListView, setDisplayListView] = useState(true)
+  const [displayListView, setDisplayListView] = useState(false)
   const [products, setProducts] = useState([])
   const [displayConditions, setDisplayConditions] = useState(
     initalDisplayConditions

@@ -18,6 +18,7 @@ const DesktopHeader = () => {
           <Logo extraClassNames={"remove-logo-margin"} />
           <p className="path-text">{pathName}</p>
         </div>
+
         <button className="view-cart-btn">
           <img src={cartIcon} alt="cart icon" className="cart-icon" />
           View Cart

@@ -1,4 +1,5 @@
 import "./productListViewItem.css"
+import { Link } from "react-router-dom"
 import cartIcon from "../../../assets/cartIcon.svg"
 
 const ProductListViewItem = ({ productItem }) => {
@@ -6,7 +7,11 @@ const ProductListViewItem = ({ productItem }) => {
     <li className="product-list-li-container">
       <div className="product-list-view-img-bg-container">
         <div className="img-bg-list-view-white-container">
-          <img src={productItem.images[0]} className="grid-view-image" />
+          <img
+            src={productItem.featuredImage}
+            className="grid-view-image"
+            alt={productItem.name}
+          />
         </div>
         <div className="product-cart-icon-circle">
           <img src={cartIcon} className="home-product-list-view-cart-icon" />
@@ -19,7 +24,12 @@ const ProductListViewItem = ({ productItem }) => {
           {productItem.color} | {productItem.type}
         </p>
         <p>{productItem.title}</p>
-        <button>Details</button>
+        <Link
+          to={`/product/${productItem.id}`}
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          <button>Details</button>
+        </Link>
       </div>
     </li>
   )

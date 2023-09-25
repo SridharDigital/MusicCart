@@ -8,6 +8,10 @@ xl	1280px	@media screen and (min-width: 1280px) { ... }
 p {
     font-size: 16px;
   }
+
+  button {
+    cursor: pointer;
+  }
   
   input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
