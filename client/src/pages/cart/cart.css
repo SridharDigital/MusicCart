@@ -1,0 +1,133 @@
+.cart-container {
+    min-height: 85vh;
+}
+
+.cart-items-container {
+    display: flex;
+    padding: 20px 15px;
+    background: #DBDBDB;
+    border: none;
+    margin-top: 12px;
+}
+
+.cart-item-featured-image{
+    aspect-ratio: 1/1;
+    width: 40%;
+    /* overflow: none; */
+    margin-right: 24px;
+}
+
+.cart-items-content-container h1 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    font-weight: 400;
+    margin-top: 0px;
+}
+
+.cart-items-content-container h2 {
+    font-size: 18px;
+    margin: 0px;
+}
+
+.cart-items-content-container p {
+    font-size: 16px;
+    margin: 6px 0px;
+}
+
+.mobile-total-container {
+    display: flex;
+    justify-content: end;
+    background-color: #DBDBDB;
+}
+
+.total-amount-container {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    margin-right: 24px;
+}
+
+.mobile-total-container p {
+    width: 200px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media (min-width: 576px) { 
+    .cart-items-content-container {
+        padding-left: 24px;
+    }
+
+    .cart-items-content-container h1 {
+        font-size: 20px;
+        margin-bottom: 6px;
+        font-weight: 400;
+    }
+    
+    .cart-items-content-container h2 {
+        font-size: 20px;
+        margin: 0px;
+    }
+    
+    .cart-items-content-container p {
+        font-size: 18px;
+        margin: 8px 0px;
+    }
+
+    .mobile-total-container p {
+        font-size: 22px;
+    }
+ }
+
+ @media (min-width: 768px) { 
+    .mobile-cart-container {
+        display: none;
+    }
+ }
+
+ @media (min-width: 640px) { 
+    .cart-items-content-container {
+        padding-left: 36px;
+    }
+
+    .cart-items-content-container h1 {
+        font-size: 24px;
+        margin-bottom: 8px;
+        font-weight: 400;
+    }
+    
+    .cart-items-content-container h2 {
+        font-size: 24px;
+        margin: 6px;
+    }
+    
+    .cart-items-content-container p {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+ }
+
+ .total-amt-heading {
+    margin-left: 12px;
+    font-weight: 400;
+ }
+
+ .total-amt-heading span {
+    font-weight: 500;
+ }
+
+ hr {
+    color: black;
+    margin-top: 24px;
+ }
+
+ .place-order-btn {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 16px;
+    border: none;
+    outline: none;
+    background: #FFD600;
+ }
