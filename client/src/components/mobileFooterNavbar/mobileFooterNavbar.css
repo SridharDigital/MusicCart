@@ -1,0 +1,39 @@
+.footer-nav-outer-container {
+    position: sticky;
+    bottom: 0px;
+    width: 100%;
+    background: #FFF;
+    border: 1px solid #C8C8C8;
+    border-left: none;
+    border-right: none;
+    /* margin-top: 48px; */
+}
+
+.mobile-footer-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 6px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-nav-outer-container {
+        display: none;
+    }
+}
+
+.footer-nav-icon-box {
+    min-width: 36px;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.footer-nav-icon-box p{
+    font-size: 12px;
+    margin: 0px;
+}
+
+.active {
+    border-top: 4px solid #2E0052;
+}
