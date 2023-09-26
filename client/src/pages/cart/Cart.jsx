@@ -56,7 +56,7 @@ const Cart = () => {
 
   const DesktopCart = () => {
     return (
-      <>
+      <div className="desktop-cart-container">
         <DesktopHeader />
         <ContentWrapper>
           <button className="product-details-back-to-products-btn">
@@ -132,7 +132,7 @@ const Cart = () => {
             </div>
           </div>
         </ContentWrapper>
-      </>
+      </div>
     )
   }
 
