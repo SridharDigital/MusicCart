@@ -104,9 +104,7 @@ li {
         display: none;
     }
 
-    .left-arrow-icon {
-        display: none;
-    }
+    
 
     .product-details-title-text {
         display: none;
@@ -154,6 +152,12 @@ li {
     .product-details-buy-now-btn {
         border-radius: 24px;
         max-width: 280px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .left-arrow-icon {
+        display: none;
     }
 }
 
