@@ -131,3 +131,136 @@
     outline: none;
     background: #FFD600;
  }
+
+
+ /* ................. Desktop ....................... */
+
+ .my-cart-heading-flex-container {
+    display: flex;
+    justify-content: center;
+    margin: 36px 0px;
+ }
+
+ .my-cart-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ }
+
+ .my-cart-icon {
+    width: 56px;
+    height: 53px;
+ }
+
+ .my-cart-heading-text {
+    font-size: 32px;
+    margin-left: 12px;
+ }
+
+ .dt-cart-items-flex-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 48px;
+ }
+
+ .dt-cart-item-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+ }
+
+ .dt-cart-item-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #E1E1E1;
+    border-left: none;
+    width: 100%;
+    padding: 24px 48px 48px 0px;
+ }
+
+ .dt-cart-item-content-container h2 {
+    margin-top: 0px;
+    font-weight: 500;
+ }
+
+ .dt-cart-item-featured-image {
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 6px;
+ }
+
+ .dt-cart-item-name-container p {
+    margin-top: 0px;
+    margin-bottom: 6px;
+    color: #A2A2A2;
+ }
+
+ .dt-cart-item-price-container p {
+    font-weight: 500;
+    font-size: 18px;
+ }
+
+ .dt-cart-item-quantity-container select {
+    width: 100px;
+    border: 1px solid grey;
+    background-color: #efe9e9;
+ }
+
+ .dt-cart-item-total-container p {
+    font-weight: 500;
+    font-size: 18px;
+ }
+
+ .dt-cart-items-total-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+ }
+
+ .dt-cart-items-total-container div {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+    padding-right: 48px;
+    border-right: 1px solid #E1E1E1;
+    padding-bottom: 48px;
+    
+ }
+
+ .dt-cart-item-price-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    padding-left: 24px;
+ }
+
+ .dt-cart-item-price-details-list-container {
+    display: flex;
+    flex-direction: column;
+ }
+
+ .dt-cart-item-price-details-list-container h2 {
+    margin-top: 0px;
+    font-weight: 500;
+ }
+
+ .dt-cart-item-price-details-list-container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
+ .dt-cart-item-price-details-list-container p {
+    font-size: 18px;
+    margin-top: 0px;
+ }
+
+ .dt-cart-total-amt-place-order-btn-container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }

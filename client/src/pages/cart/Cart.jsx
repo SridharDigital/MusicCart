@@ -1,9 +1,13 @@
 import "./cart.css"
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
 import leftArrow from "../../assets/leftArrow.svg"
+import myCartIcon from "../../assets/myCartIcon.svg"
+import DesktopHeader from "../../components/desktopHeader/DesktopHeader"
 
 const convenienceFee = 45
 const totalAmount = 3545
+const discount = 0
+const totalNoOfItems = 1
 
 const Cart = () => {
   const cartItem = {
@@ -17,39 +21,124 @@ const Cart = () => {
 
   const MobileCart = () => {
     return (
-      <div className="mobile-cart-container">
-        <img src={leftArrow} className="left-arrow-icon" alt="left arrow" />{" "}
-        <br />
-        <div className="cart-items-container">
-          <img
-            src={cartItem.featuredImage}
-            className="cart-item-featured-image"
-          />
-          <div className="cart-items-content-container">
-            <h1>{cartItem.name}</h1>
-            <h2>₹{cartItem.price.toLocaleString("en-US")}</h2>
-            <p>Colour : {cartItem.color}</p>
-            {cartItem.isAvailable ? "In Stock" : "Out of Stock"}
-            <p>Convenience Fee ₹{convenienceFee}</p>
+      <ContentWrapper>
+        <div className="mobile-cart-container">
+          <img src={leftArrow} className="left-arrow-icon" alt="left arrow" />{" "}
+          <br />
+          <div className="cart-items-container">
+            <img
+              src={cartItem.featuredImage}
+              className="cart-item-featured-image"
+            />
+            <div className="cart-items-content-container">
+              <h1>{cartItem.name}</h1>
+              <h2>₹{cartItem.price.toLocaleString("en-US")}</h2>
+              <p>Colour : {cartItem.color}</p>
+              {cartItem.isAvailable ? "In Stock" : "Out of Stock"}
+              <p>Convenience Fee ₹{convenienceFee}</p>
+            </div>
           </div>
-        </div>
-        <div className="mobile-total-container">
-          <div className="total-amount-container">
-            <p>Total : </p>
-            <p>₹{totalAmount.toLocaleString("en-US")}</p>
+          <div className="mobile-total-container">
+            <div className="total-amount-container">
+              <p>Total : </p>
+              <p>₹{totalAmount.toLocaleString("en-US")}</p>
+            </div>
           </div>
+          <hr />
+          <h1 className="total-amt-heading">
+            Total Amount <span>₹{totalAmount.toLocaleString("en-US")}</span>
+          </h1>
+          <button className="place-order-btn">PLACE ORDER</button>
         </div>
-        <hr />
-        <h1 className="total-amt-heading">
-          Total Amount <span>₹{totalAmount.toLocaleString("en-US")}</span>
-        </h1>
-        <button className="place-order-btn">PLACE ORDER</button>
-      </div>
+      </ContentWrapper>
     )
   }
+
+  const DesktopCart = () => {
+    return (
+      <>
+        <DesktopHeader />
+        <ContentWrapper>
+          <button className="product-details-back-to-products-btn">
+            Back to products
+          </button>
+          <div className="my-cart-heading-flex-container">
+            <div className="my-cart-heading">
+              <img src={myCartIcon} className="my-cart-icon" alt="cart" />
+              <h1 className="my-cart-heading-text">My Cart</h1>
+            </div>
+          </div>
+          <div className="dt-cart-items-flex-container">
+            <div className="dt-cart-item-container">
+              <div className="dt-cart-item-content-container">
+                <img
+                  src={cartItem.featuredImage}
+                  alt={cartItem.name}
+                  className="dt-cart-item-featured-image"
+                />
+                <div className="dt-cart-item-name-container">
+                  <h2>{cartItem.name}</h2>
+                  <p>Colour : {cartItem.color}</p>
+                  <p>{cartItem.isAvailable ? "In Stock" : "Out of Stock"}</p>
+                </div>
+                <div className="dt-cart-item-price-container">
+                  <h2>Price</h2>
+                  <p>₹{cartItem.price.toLocaleString("en-US")}</p>
+                </div>
+                <div className="dt-cart-item-quantity-container">
+                  <h2>Quantity</h2>
+                  <select>
+                    {Array.from(Array(8)).map((_, i) => (
+                      <option value={i + 1}>{i + 1}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="dt-cart-item-total-container">
+                  <h2>Total</h2>
+                  <p>₹{totalAmount.toLocaleString("en-US")}</p>
+                </div>
+              </div>
+              <div className="dt-cart-items-total-container">
+                <div>
+                  <h3>{totalNoOfItems} Item</h3>
+                  <h3>₹{totalAmount.toLocaleString("en-US")}</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className="dt-cart-item-price-details-container">
+              <div className="dt-cart-item-price-details-list-container">
+                <h2>PRICE DETAILS</h2>
+                <div>
+                  <p>Total MRP</p>
+                  <p>₹{totalAmount.toLocaleString("en-US")}</p>
+                </div>
+                <div>
+                  <p>Discount on MRP</p>
+                  <p>₹{discount.toLocaleString("en-US")}</p>
+                </div>
+                <div>
+                  <p>Convenience Fee</p>
+                  <p>₹{convenienceFee.toLocaleString("en-US")}</p>
+                </div>
+              </div>
+              <div className="dt-cart-total-amt-place-order-btn-container">
+                <div>
+                  <h3>Total Amount</h3>
+                  <h3>₹{totalAmount.toLocaleString("en-US")}</h3>
+                </div>
+                <button className="place-order-btn">PLACE ORDER</button>
+              </div>
+            </div>
+          </div>
+        </ContentWrapper>
+      </>
+    )
+  }
+
   return (
     <div className="cart-container">
-      <ContentWrapper>{MobileCart()}</ContentWrapper>
+      {MobileCart()} {DesktopCart()}
     </div>
   )
 }
