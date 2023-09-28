@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import "./App.css"
+import ProtectedRoute from "./utils/ProtectedRoute"
 
 import Navbar from "./components/navbar/Navbar"
 import MobileFooterNavbar from "./components/mobileFooterNavbar/MobileFooterNavbar"
@@ -20,7 +21,14 @@ const App = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route
+          path="/checkout"
+          element={
+            <ProtectedRoute>
+              <Checkout />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/cart" element={<Cart />} />
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetails />} />
