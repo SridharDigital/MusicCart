@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./orderSuccess.css"
 import successImage from "../../assets/successImage.png"
 import Logo from "../../components/logo/Logo"
@@ -22,9 +23,11 @@ const OrderSuccess = () => {
           <p className="order-success-text">
             You will be receiving a confirmation email with order details
           </p>
-          <button className="primary-button go-to-home-page-button">
-            Go back to Home page
-          </button>
+          <Link to="/">
+            <button className="primary-button go-to-home-page-button">
+              Go back to Home page
+            </button>
+          </Link>
         </div>
       </ContentWrapper>
     </>

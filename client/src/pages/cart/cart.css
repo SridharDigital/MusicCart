@@ -248,6 +248,13 @@
     padding-left: 24px;
  }
 
+ .dt-cart-item-super-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-height: 50vh;
+ }
+
  .dt-cart-item-price-details-list-container {
     display: flex;
     flex-direction: column;

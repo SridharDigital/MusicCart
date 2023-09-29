@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom"
+import { useLocation, Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import Rating from "react-rating"
 
@@ -32,13 +32,21 @@ const ProductDetails = (props) => {
 
   return (
     <>
-      <DesktopHeader />
+      <DesktopHeader
+        displayViewCart
+        displayPath={`Home/ ${productDetails.name}`}
+      />
       <ContentWrapper>
-        <img src={leftArrow} className="left-arrow-icon" /> <br />
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <img src={leftArrow} className="left-arrow-icon" />
+        </Link>{" "}
+        <br />
         <button className="product-details-buy-now-btn btn-top">Buy Now</button>
-        <button className="product-details-back-to-products-btn">
-          Back to products
-        </button>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <button className="product-details-back-to-products-btn">
+            Back to products
+          </button>
+        </Link>
         <br />
         <p className="desktop-product-details-title">{productDetails.title}</p>
         <div className="carousel-and-content-container">
@@ -66,7 +74,11 @@ const ProductDetails = (props) => {
               Price - ₹ {productDetails.price?.toLocaleString("en-US")}
             </p>
             <p style={{ fontWeight: "500" }}>
-              {productDetails.color} | {productDetails.type}
+              {productDetails.color?.charAt(0).toUpperCase() +
+                productDetails.color?.slice(1).toLowerCase()}{" "}
+              |{" "}
+              {productDetails.type?.charAt(0).toUpperCase() +
+                productDetails.type?.slice(1).toLowerCase()}
             </p>
             <p className="about-this-item">About this item</p>
             <ul>

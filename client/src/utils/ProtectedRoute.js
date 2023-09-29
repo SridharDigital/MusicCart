@@ -1,10 +1,10 @@
 import { Navigate, useLocation } from "react-router-dom"
-import Cookie from "js-cookie"
+import { useSelector } from "react-redux"
 
 const ProtectedRoute = ({ children }) => {
+  const isUserLoggedIn = useSelector((state) => state.user.isUserLoggedIn)
   const location = useLocation()
-  const token = Cookie.get("jwt_token")
-  if (token) {
+  if (!isUserLoggedIn) {
     return <Navigate to="/login" state={{ from: location }} replace />
   }
   return children

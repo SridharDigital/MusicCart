@@ -23,6 +23,7 @@ const initalDisplayConditions = {
 const Home = () => {
   const [displayListView, setDisplayListView] = useState(false)
   const [products, setProducts] = useState([])
+  const [screenWidth, setScreenWidth] = useState(window.screen.width)
   const [displayConditions, setDisplayConditions] = useState(
     initalDisplayConditions
   )
@@ -40,15 +41,47 @@ const Home = () => {
     })()
   }, [])
 
-  // console.log("the screen width is", window.screen.width)
+  useEffect(() => {
+    ;(async () => {
+      try {
+        const url = "/products"
+        const featuredProducts = await callApi("GET", url, displayConditions)
+        console.log({ featuredProducts })
+        setProducts(featuredProducts)
+      } catch (error) {
+        console.log(error)
+      }
+    })()
+  }, [displayConditions])
+
+  useEffect(() => {
+    const updateWidth = () => {
+      setScreenWidth(window.innerWidth)
+    }
+
+    window.addEventListener("resize", updateWidth)
+
+    if (screenWidth < 1024) {
+      setDisplayListView(false)
+    }
+
+    return () => {
+      window.removeEventListener("resize", updateWidth)
+    }
+  }, [screenWidth])
+
+  console.log({ displayConditions })
 
   return (
     <>
-      <DesktopHeader />
+      <DesktopHeader displayViewCart displayPath="Home" />
       <ContentWrapper>
         <div className="home-top-section">
           <HeroSection />
-          <ProductNavbar />
+          <ProductNavbar
+            setDisplayConditions={setDisplayConditions}
+            setDisplayListView={setDisplayListView}
+          />
         </div>
         {displayListView ? (
           <ul className="product-list-view-ul-container">

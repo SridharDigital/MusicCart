@@ -84,8 +84,13 @@
     justify-content: space-between;
 }
 
+.checkout-place-order-btn-link {
+    width: 20%;
+    margin-right: 24px;
+}
+
 .checkout-place-order-btn {
-    width: 100%;
+    width: 100% !important;
     border-radius: 8px;
     font-size: 18px;
     padding: 16px;

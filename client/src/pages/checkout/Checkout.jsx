@@ -1,28 +1,43 @@
+import { Link } from "react-router-dom"
+
 import "./checkout.css"
 import leftArrow from "../../assets/leftArrow.svg"
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
 import DesktopHeader from "../../components/desktopHeader/DesktopHeader"
+import { validateUserLoggedin } from "../../utils/validateUserLoggedin"
 
-const cartItem = {
-  featuredImage:
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/i/o/h/-original-imags36kchxetkkk.jpeg?q=70",
-  name: "Sony WH-CH720N",
-  price: 3500,
-  color: "Black",
-  isAvailable: true,
-}
+const cartItems = [
+  {
+    featuredImage:
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/i/o/h/-original-imags36kchxetkkk.jpeg?q=70",
+    name: "Sony WH-CH720N",
+    price: 3500,
+    color: "Black",
+    isAvailable: true,
+  },
+  {
+    featuredImage:
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/i/o/h/-original-imags36kchxetkkk.jpeg?q=70",
+    name: "Sony WH-CH720N",
+    price: 5600,
+    color: "Black",
+    isAvailable: true,
+  },
+]
 
 const convenienceFee = 45
 const totalAmount = 3545
 const discount = 0
 const totalNoOfItems = 1
-
+console.log(validateUserLoggedin())
 const Checkout = () => {
   const mobileCheckout = () => {
     return (
       <div className="mobile-checkout">
         <ContentWrapper>
-          <img src={leftArrow} className="left-arrow-icon" alt="left arrow" />{" "}
+          <Link to="/cart">
+            <img src={leftArrow} className="left-arrow-icon" alt="left arrow" />
+          </Link>
           <br />
           <h1 className="checkout-heading">Checkout</h1>
           <ol className="checkout-content-container">
@@ -34,7 +49,7 @@ const Checkout = () => {
             <li>Payment method</li>
             <p>Pay on delivery ( Cash/Card )</p>
             <li>Review items and delivery</li>
-            <div className="checkout-item-content-container">
+            {/* <div className="checkout-item-content-container">
               <img
                 src={cartItem.featuredImage}
                 className="checkout-cart-item-featured-image"
@@ -45,7 +60,21 @@ const Checkout = () => {
               <p className="checkout-bold">
                 Estimated delivery : Monday — FREE Standard Delivery
               </p>
-            </div>
+            </div> */}
+            {cartItems.map((cartItem) => (
+              <div className="checkout-item-content-container">
+                <img
+                  src={cartItem.featuredImage}
+                  className="checkout-cart-item-featured-image"
+                />
+                <h2>{cartItem.name}</h2>
+                <p>Colour : {cartItem.color}</p>
+                <p>{cartItem.isAvailable ? "In Stock" : "Out of Stock"}</p>
+                <p className="checkout-bold">
+                  Estimated delivery : Monday — FREE Standard Delivery
+                </p>
+              </div>
+            ))}
           </ol>
           <div className="order-summary">
             <h2>Order Summary</h2>
@@ -63,9 +92,11 @@ const Checkout = () => {
               <h2>Order Total :</h2>
               <h2>₹{totalAmount.toLocaleString("en-US")}</h2>
             </div>
-            <button className="checkout-place-order-btn">
-              Place your order
-            </button>
+            <Link to="/order-success" style={{ textDecoration: "none" }}>
+              <button className="checkout-place-order-btn">
+                Place your order
+              </button>
+            </Link>
           </div>
         </ContentWrapper>
       </div>
@@ -75,9 +106,11 @@ const Checkout = () => {
   const desktopCheckout = () => {
     return (
       <div className="desktop-checkout">
-        <DesktopHeader />
+        <DesktopHeader displayViewCart={false} displayPath="Home/ Checkout" />
         <ContentWrapper>
-          <button className="back-to-cart-btn">Back to cart</button>
+          <Link to="/cart">
+            <button className="back-to-cart-btn">Back to cart</button>
+          </Link>
           <div className="dt-checkout-heading-flex-container">
             <h1>Checkout</h1>
           </div>
@@ -97,7 +130,7 @@ const Checkout = () => {
                 </li>
                 <li>
                   <h2>3. Review items and delivery</h2>
-                  <div className="dt-checkout-item-content-container">
+                  {/* <div className="dt-checkout-item-content-container">
                     <img
                       src={cartItem.featuredImage}
                       className="checkout-cart-item-featured-image"
@@ -109,13 +142,38 @@ const Checkout = () => {
                       Estimated delivery : <br /> Monday — FREE Standard
                       Delivery
                     </p>
+                  </div> */}
+                  <div className="dt-checkout-item-content-container">
+                    {cartItems.map((cartItem) => (
+                      <>
+                        <img
+                          src={cartItem.featuredImage}
+                          className="checkout-cart-item-featured-image"
+                        />
+                        <h3>{cartItem.name}</h3>
+                        <p>Colour : {cartItem.color}</p>
+                        <p>
+                          {cartItem.isAvailable ? "In Stock" : "Out of Stock"}
+                        </p>
+                        <p className="checkout-bold">
+                          Estimated delivery : <br /> Monday — FREE Standard
+                          Delivery
+                        </p>
+                      </>
+                    ))}
                   </div>
                 </li>
               </ol>
               <div className="dt-place-order-container">
-                <button className="checkout-place-order-btn">
-                  Place your order
-                </button>
+                <Link
+                  to="/order-success"
+                  className="checkout-place-order-btn-link"
+                >
+                  <button className="checkout-place-order-btn">
+                    Place your order
+                  </button>
+                </Link>
+
                 <div>
                   <h3>Order Total : ₹{totalAmount.toLocaleString("en-US")}</h3>
                   <p>
@@ -127,9 +185,11 @@ const Checkout = () => {
             </div>
             <div className="dt-place-your-order-summary-flex-container">
               <div className="dt-place-your-order-summary-container">
-                <button className="checkout-place-order-btn">
-                  Place your order
-                </button>
+                <Link to="/order-success" style={{ textDecoration: "none" }}>
+                  <button className="checkout-place-order-btn">
+                    Place your order
+                  </button>
+                </Link>
                 <p>
                   By placing your order, you agree to Musicart privacy notice
                   and conditions of use.

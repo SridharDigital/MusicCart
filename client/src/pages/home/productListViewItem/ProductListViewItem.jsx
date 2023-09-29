@@ -21,7 +21,11 @@ const ProductListViewItem = ({ productItem }) => {
         <h2>{productItem.name}</h2>
         <p>Price - ₹ {productItem.price.toLocaleString("en-US")}</p>
         <p>
-          {productItem.color} | {productItem.type}
+          {productItem.color?.charAt(0).toUpperCase() +
+            productItem.color?.slice(1).toLowerCase()}{" "}
+          |{" "}
+          {productItem.type?.charAt(0).toUpperCase() +
+            productItem.type?.slice(1).toLowerCase()}
         </p>
         <p>{productItem.title}</p>
         <Link
