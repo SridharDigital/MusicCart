@@ -1,6 +1,8 @@
-import { Link, useNavigate } from "react-router-dom"
-import { useState, useEffect } from "react"
+import { Link, useNavigate, Navigate } from "react-router-dom"
+import { useState } from "react"
 import { callApi } from "../../utils/callApi"
+import { useSelector, useDispatch } from "react-redux"
+import { loginUser } from "../../store/userSlice"
 
 import "./signup.css"
 import Logo from "../../components/logo/Logo"
@@ -11,8 +13,14 @@ const initialUserValues = { name: "", mobile: "", email: "", password: "" }
 const Signup = () => {
   const [user, setUser] = useState(initialUserValues)
   const [errors, setErrors] = useState({})
+  const isUserLoggedIn = useSelector((state) => state.user.isUserLoggedIn)
 
+  const dispatch = useDispatch()
   const navigate = useNavigate()
+
+  if (isUserLoggedIn) {
+    return <Navigate to="/" />
+  }
 
   const handleOnInput = (event) => {
     if (event.target.name === "mobile" && user.mobile.length >= 10) {
@@ -49,6 +57,7 @@ const Signup = () => {
       if (response.status === "FAIL") {
         setErrors({ apiError: response.message })
       } else {
+        dispatch(loginUser(response.data))
         navigate("/")
       }
     }

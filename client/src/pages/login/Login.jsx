@@ -1,5 +1,8 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import { useState } from "react"
+
+import { useSelector, useDispatch } from "react-redux"
+import { loginUser } from "../../store/userSlice"
 
 import "./login.css"
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
@@ -11,8 +14,13 @@ const initialUserValues = { emailOrMobile: "", password: "" }
 const Login = () => {
   const [user, setUser] = useState(initialUserValues)
   const [errors, setErrors] = useState({})
+  const isUserLoggedIn = useSelector((state) => state.user.isUserLoggedIn)
 
-  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  if (isUserLoggedIn) {
+    return <Navigate to="/" />
+  }
 
   const handleOnInput = (event) => {
     setUser((prevUsers) => ({
@@ -41,12 +49,15 @@ const Login = () => {
     const isValidationSuccess = validateForm()
     if (isValidationSuccess) {
       const response = await callApi("POST", "/login", user)
+      console.log(response)
+
       setUser(initialUserValues)
       if (response.status === "FAIL") {
         setErrors({ apiError: response.message })
       } else {
+        dispatch(loginUser(response.data))
         console.log("navigation executed")
-        navigate("/")
+        return <Navigate to="/" />
       }
     }
   }
