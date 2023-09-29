@@ -8,6 +8,22 @@ dotenv.config()
 
 const app = express()
 
+const verifyAuthentication = (req, res, next) => {
+  try {
+    const user = jwt.verify(
+      req.headers.authorization,
+      process.env.JWT_SECRET_KEY
+    )
+    req.user = user
+    next()
+  } catch (error) {
+    res.json({
+      status: "ERROR",
+      message: "Authentication failed. Please log in to continue.",
+    })
+  }
+}
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cors())
@@ -485,7 +501,7 @@ app.get("/api/product/:id", async (req, res) => {
 })
 
 app.get("/api/products", async (req, res) => {
-  // console.log(req.query)
+  console.log("the headers are", req.headers.authorization)
   const {
     isAvailable,
     rating,
@@ -620,7 +636,7 @@ app.get("/api/get-filter-options", async (req, res) => {
 //   }
 // })
 
-app.get("/api/get-cart-items", async (req, res) => {
+app.get("/api/get-cart-items", verifyAuthentication, async (req, res) => {
   const { userId } = req.query
   console.log(req.query)
   try {
