@@ -2,7 +2,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { logoutUser } from "../../store/userSlice"
 
-import "./mobileFooterNavbar.css"
+import "./footerNavbar.css"
 
 import ContentWrapper from "../contentWrapper/ContentWrapper"
 import navbarCartIcon from "../../assets/navbarCartIcon.svg"
@@ -60,6 +60,9 @@ const MobileFooterNavbar = () => {
           </ContentWrapper>
         </div>
       )}
+      <div className="desktop-footer">
+        <p>Musicart | All rights reserved</p>
+      </div>
     </>
   )
 }

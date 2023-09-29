@@ -54,3 +54,24 @@
     border-radius: 25px;
     aspect-ratio: 1.2/1;
 }
+
+.m-carousel-container {
+    overflow-x: hidden;
+    display: flex;
+    gap: 24px;
+}
+
+.m-carousel-container::-webkit-scrollbar {
+    display: none;
+  }
+
+.slick-container {
+    /* padding: 40px; */
+    display: flex;
+}
+
+@media screen and (min-width: 768px) {
+    .slick-container {
+        display: none;
+    }
+}

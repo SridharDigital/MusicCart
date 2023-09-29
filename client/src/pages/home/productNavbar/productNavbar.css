@@ -45,6 +45,7 @@
     display: flex;
     overflow-x: auto;
   }
+  
   .icon-and-taxonomy-container::-webkit-scrollbar {
     display: none;
   }

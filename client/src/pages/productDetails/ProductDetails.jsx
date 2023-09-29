@@ -41,7 +41,11 @@ const ProductDetails = (props) => {
           <img src={leftArrow} className="left-arrow-icon" />
         </Link>{" "}
         <br />
-        <button className="product-details-buy-now-btn btn-top">Buy Now</button>
+        <Link to="/cart" style={{ textDecoration: "none" }}>
+          <button className="product-details-buy-now-btn btn-top">
+            Buy Now
+          </button>
+        </Link>
         <Link to="/" style={{ textDecoration: "none" }}>
           <button className="product-details-back-to-products-btn">
             Back to products
@@ -98,11 +102,15 @@ const ProductDetails = (props) => {
                 {productDetails.company}
               </span>
             </p>
-            <button className="product-details-add-to-cart-btn">
-              Add to cart
-            </button>
+            <Link to="/cart" style={{ textDecoration: "none" }}>
+              <button className="product-details-add-to-cart-btn">
+                Add to cart
+              </button>
+            </Link>
             <br />
-            <button className="product-details-buy-now-btn">Buy Now</button>
+            <Link to="/cart" style={{ textDecoration: "none" }}>
+              <button className="product-details-buy-now-btn">Buy Now</button>
+            </Link>
           </div>
         </div>
       </ContentWrapper>

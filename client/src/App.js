@@ -6,7 +6,7 @@ import { Provider } from "react-redux"
 import "./App.css"
 import ProtectedRoute from "./utils/ProtectedRoute"
 import Navbar from "./components/navbar/Navbar"
-import MobileFooterNavbar from "./components/mobileFooterNavbar/MobileFooterNavbar"
+import FooterNavbar from "./components/footerNavbar/FooterNavbar"
 import Home from "./pages/home/Home"
 import Login from "./pages/login/Login"
 import Signup from "./pages/signup/Signup"
@@ -45,7 +45,7 @@ const App = () => {
           <Route path="/order-success" element={<OrderSuccess />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
-        <MobileFooterNavbar />
+        <FooterNavbar />
       </BrowserRouter>
     </Provider>
   )

@@ -34,7 +34,7 @@ const discount = 0
 // ]
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState([])
+  const [cartItems, setCartItems] = useState("")
   const userId = useSelector((state) => state.user.userId)
 
   const dispatch = useDispatch()
@@ -66,7 +66,7 @@ const Cart = () => {
     // console.log({ updatedCartItems })
   }
 
-  const totalAmount = calculateTotalPrice(cartItems)
+  const totalAmount = cartItems.length > 0 && calculateTotalPrice(cartItems)
   dispatch(updateCartTotal(totalAmount))
 
   const MobileCart = () => {
@@ -90,22 +90,21 @@ const Cart = () => {
               <p>Convenience Fee ₹{convenienceFee}</p>
             </div>
           </div> */}
-          {cartItems.length > 0 &&
-            cartItems.map((cartItem) => (
-              <div className="cart-items-container">
-                <img
-                  src={cartItem.featuredImage}
-                  className="cart-item-featured-image"
-                />
-                <div className="cart-items-content-container">
-                  <h1>{cartItem.name}</h1>
-                  <h2>₹{cartItem.price.toLocaleString("en-US")}</h2>
-                  <p>Colour : {cartItem.color}</p>
-                  {cartItem.isAvailable ? "In Stock" : "Out of Stock"}
-                  <p>Convenience Fee ₹{convenienceFee}</p>
-                </div>
+          {cartItems.map((cartItem) => (
+            <div className="cart-items-container">
+              <img
+                src={cartItem.featuredImage}
+                className="cart-item-featured-image"
+              />
+              <div className="cart-items-content-container">
+                <h1>{cartItem.name}</h1>
+                <h2>₹{cartItem.price.toLocaleString("en-US")}</h2>
+                <p>Colour : {cartItem.color}</p>
+                {cartItem.isAvailable ? "In Stock" : "Out of Stock"}
+                <p>Convenience Fee ₹{convenienceFee}</p>
               </div>
-            ))}
+            </div>
+          ))}
           <div className="mobile-total-container">
             <div className="total-amount-container">
               <p>Total : </p>
@@ -181,44 +180,41 @@ const Cart = () => {
               </div>
             </div> */}
             <div className="dt-cart-item-container">
-              {cartItems.length > 0 &&
-                cartItems.map((cartItem) => (
-                  <div className="dt-cart-item-content-container">
-                    <img
-                      src={cartItem.featuredImage}
-                      alt={cartItem.name}
-                      className="dt-cart-item-featured-image"
-                    />
-                    <div className="dt-cart-item-name-container">
-                      <h2>{cartItem.name}</h2>
-                      <p>Colour : {cartItem.color}</p>
-                      <p>
-                        {cartItem.isAvailable ? "In Stock" : "Out of Stock"}
-                      </p>
-                    </div>
-                    <div className="dt-cart-item-price-container">
-                      <h2>Price</h2>
-                      <p>₹{cartItem.price.toLocaleString("en-US")}</p>
-                    </div>
-                    <div className="dt-cart-item-quantity-container">
-                      <h2>Quantity</h2>
-                      <select onChange={handleQuantity} id={cartItem.id}>
-                        {Array.from(Array(8)).map((_, i) => (
-                          <option value={i + 1}>{i + 1}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="dt-cart-item-total-container">
-                      <h2>Total</h2>
-                      <p>
-                        ₹
-                        {(cartItem.price * cartItem.quantity).toLocaleString(
-                          "en-US"
-                        )}
-                      </p>
-                    </div>
+              {cartItems.map((cartItem) => (
+                <div className="dt-cart-item-content-container">
+                  <img
+                    src={cartItem.featuredImage}
+                    alt={cartItem.name}
+                    className="dt-cart-item-featured-image"
+                  />
+                  <div className="dt-cart-item-name-container">
+                    <h2>{cartItem.name}</h2>
+                    <p>Colour : {cartItem.color}</p>
+                    <p>{cartItem.isAvailable ? "In Stock" : "Out of Stock"}</p>
                   </div>
-                ))}
+                  <div className="dt-cart-item-price-container">
+                    <h2>Price</h2>
+                    <p>₹{cartItem.price.toLocaleString("en-US")}</p>
+                  </div>
+                  <div className="dt-cart-item-quantity-container">
+                    <h2>Quantity</h2>
+                    <select onChange={handleQuantity} id={cartItem.id}>
+                      {Array.from(Array(8)).map((_, i) => (
+                        <option value={i + 1}>{i + 1}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="dt-cart-item-total-container">
+                    <h2>Total</h2>
+                    <p>
+                      ₹
+                      {(cartItem.price * cartItem.quantity).toLocaleString(
+                        "en-US"
+                      )}
+                    </p>
+                  </div>
+                </div>
+              ))}
               <div className="dt-cart-items-total-container">
                 <div>
                   <h3>{cartItems.length} Item</h3>
@@ -265,7 +261,16 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      {MobileCart()} {DesktopCart()}
+      {cartItems.length > 0 ? (
+        <>
+          {MobileCart()}
+          {DesktopCart()}
+        </>
+      ) : (
+        <div className="min-page">
+          <h1>Please add items to cart</h1>
+        </div>
+      )}
     </div>
   )
 }

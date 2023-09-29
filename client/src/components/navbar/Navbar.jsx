@@ -35,7 +35,9 @@ const Navbar = ({ displaySearchBarinMobile, history }) => {
               Get 50% off on selected items
             </button>
             <div className="hr-line-1"></div>
-            <button className="navbar-btn">Shop Now</button>
+            <Link to="/">
+              <button className="navbar-btn">Shop Now</button>
+            </Link>
           </div>
           <div className="navbar-flex-box authentication-box">
             {isUserLoggedIn ? (
