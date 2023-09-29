@@ -24,13 +24,16 @@
     }
 }
 
-.footer-nav-icon-box {
+.footer-nav-icon-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
     min-width: 36px;
     text-align: center;
     padding-top: 6px;
 }
 
-.footer-nav-icon-box p{
+.footer-nav-icon-button p {
     font-size: 12px;
     margin: 0px;
 }

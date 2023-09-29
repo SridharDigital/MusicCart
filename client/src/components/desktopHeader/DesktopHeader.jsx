@@ -1,11 +1,11 @@
-import { useLocation } from "react-router-dom"
+import { useLocation, Link } from "react-router-dom"
 import Logo from "../logo/Logo"
 import ContentWrapper from "../contentWrapper/ContentWrapper"
-import cartIcon from "../../assets/cartIcon.svg"
+import viewCartIcon from "../../assets/viewCartIcon.svg"
 
 import "./desktopHeader.css"
 
-const DesktopHeader = () => {
+const DesktopHeader = ({ displayViewCart, displayPath }) => {
   const location = useLocation()
   const pathText =
     location.pathname === "/" ? "home" : location.pathname.slice(1)
@@ -16,13 +16,17 @@ const DesktopHeader = () => {
       <div className="desktop-header-container">
         <div className="logo-and-breadcrumb-container">
           <Logo extraClassNames={"remove-logo-margin"} />
-          <p className="path-text">{pathName}</p>
+          <p className="path-text">{displayPath}</p>
         </div>
 
-        <button className="view-cart-btn">
-          <img src={cartIcon} alt="cart icon" className="cart-icon" />
-          View Cart
-        </button>
+        {displayViewCart && (
+          <Link to="/cart" style={{ textDecoration: "none" }}>
+            <button className="view-cart-btn">
+              <img src={viewCartIcon} alt="cart icon" className="cart-icon" />
+              View Cart
+            </button>
+          </Link>
+        )}
       </div>
     </ContentWrapper>
   )
