@@ -589,26 +589,84 @@ app.get("/api/get-filter-options", async (req, res) => {
   }
 })
 
+// app.post("/api/add-cart-items", async (req, res) => {
+//   try {
+//     const { userId, productId } = req.body
+//     // console.log("the req.body")
+//     // console.log(req.body)
+//     // console.log("The add to cart product id is")
+//     const isUserExists = await UserCartItem.findOne({ userId: userId })
+//     console.log({ isUserExists })
+//     if (isUserExists) {
+//       console.log("The user already exists", isUserExists._id)
+//       const response = await UserCartItem.update(
+//         { userId },
+//         { $push: { cartItems: productId } }
+//       )
+//       console.log("the response is")
+//       console.log({ response })
+//     } else {
+//       console.log("The user does not exists")
+//       const response = await UserCartItem.create({
+//         userId,
+//         cartItems: productId,
+//       })
+//     }
+//     res.send("The product added successfully")
+//     // console.log({ isUserExists })
+//   } catch (error) {
+//     res.send(error)
+//     // console.log(error)
+//   }
+// })
+
+app.get("/api/get-cart-items", async (req, res) => {
+  const { userId } = req.query
+  console.log(req.query)
+  try {
+    const { cartItems } = await UserCartItem.findOne({ userId })
+    console.log(cartItems)
+    const query = { _id: { $in: cartItems } }
+    const products = await Product.find(query)
+    const productsList = products.map((eachProduct) => ({
+      id: eachProduct._id,
+      name: eachProduct.name,
+      price: eachProduct.price,
+      color: eachProduct.color,
+      type: eachProduct.type,
+      isAvailable: eachProduct.isAvailable,
+      featuredImage: eachProduct.images[0],
+      quantity: 1,
+    }))
+    console.log({ productsList })
+    res.send(productsList)
+  } catch (error) {
+    res.send(error)
+  }
+})
+
 app.post("/api/add-cart-items", async (req, res) => {
   try {
     const { userId, productId } = req.body
-    console.log(req.body)
-    // console.log("The add to cart product id is")
     const isUserExists = await UserCartItem.findOne({ userId: userId })
+
     if (isUserExists) {
-      const response = await UserCartItem.findByIdAndUpdate(
-        { userId: userId },
+      await UserCartItem.updateOne(
+        { userId },
         { $push: { cartItems: productId } }
       )
     } else {
-      const response = await UserCartItem.create({
+      console.log("The user does not exist")
+      await UserCartItem.create({
         userId,
-        cartItems: productId,
+        cartItems: [productId],
       })
     }
-    // console.log({ isUserExists })
+
+    res.send({ message: "Product added successfully" })
   } catch (error) {
-    // console.log(error)
+    console.error(error)
+    res.send({ error: "Internal server error" })
   }
 })
 
