@@ -32,7 +32,14 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-          <Route path="/cart" element={<Cart />} />
+          <Route
+            path="/cart"
+            element={
+              <ProtectedRoute>
+                <Cart />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/order-success" element={<OrderSuccess />} />
