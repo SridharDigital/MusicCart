@@ -8,7 +8,7 @@ export const callApi = async (method, url, params) => {
       const { data } = await axios.get(BASE_URL + url, { params })
       return data
     } else if (method === "POST") {
-      const { data } = await axios.post(BASE_URL + url, { params })
+      const { data } = await axios.post(BASE_URL + url, params)
       return data
     }
   } catch (error) {
