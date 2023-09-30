@@ -83,21 +83,30 @@ const Home = () => {
             setDisplayListView={setDisplayListView}
           />
         </div>
-        {displayListView ? (
-          <ul className="product-list-view-ul-container">
-            {products?.map((eachProduct) => (
-              <ProductListViewItem
-                productItem={eachProduct}
-                key={eachProduct.id}
-              />
-            ))}
-          </ul>
+        {products.length > 0 ? (
+          <>
+            {displayListView ? (
+              <ul className="product-list-view-ul-container">
+                {products?.map((eachProduct) => (
+                  <ProductListViewItem
+                    productItem={eachProduct}
+                    key={eachProduct.id}
+                  />
+                ))}
+              </ul>
+            ) : (
+              <ul className="product-grid-view-ul-container">
+                {products?.map((eachProduct) => (
+                  <ProductGridItem
+                    productItem={eachProduct}
+                    key={eachProduct.id}
+                  />
+                ))}
+              </ul>
+            )}
+          </>
         ) : (
-          <ul className="product-grid-view-ul-container">
-            {products?.map((eachProduct) => (
-              <ProductGridItem productItem={eachProduct} key={eachProduct.id} />
-            ))}
-          </ul>
+          <h1>No Products Found</h1>
         )}
       </ContentWrapper>
     </>

@@ -86,11 +86,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/z/0/v/-original-imagrufzy5mev7kt.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/y/n/q/-original-imagrufzwpphggpp.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/m/8/s/-original-imagrufztuk5fher.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/i/c/g/-original-imagrufzwxt8gzeg.jpeg?q=70"
-  ],
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/z/0/v/-original-imagrufzy5mev7kt.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/y/n/q/-original-imagrufzwpphggpp.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/m/8/s/-original-imagrufztuk5fher.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/i/c/g/-original-imagrufzwxt8gzeg.jpeg?q=70",
+    ],
     description: `Lightest Earbuds: These small, lightweight headphones have an ergonomic surface design for all-day comfort, even for smaller ears.
     Noise Cancellation: Cancel-out background noise with Noise Sensor Technology or use the Ambient Sound Mode to stay connected to your natural surroundings. Wind Noise Reduction Structure the WF-C700N delivers your voice clearly, even on a windy day.
     Multipoint connection: WF-C700N can be paired with two Bluetooth devices at the same time. So when call comes in your headphones know which device is ringing & connects to the right one automatically.
@@ -110,11 +110,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://rukminim2.flixcart.com/image/416/416/ky7lci80/headphone/c/j/q/wf-c500-bz-in-sony-original-imagahvreyx7heq7.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/ky7lci80/headphone/h/5/q/wf-c500-bz-in-sony-original-imagahvrr9kgaxat.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/ky7lci80/headphone/y/0/b/wf-c500-bz-in-sony-original-imagahvrh4tzugwh.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/ky7lci80/headphone/3/x/c/wf-c500-bz-in-sony-original-imagahvrnxuxndya.jpeg?q=70"
-  ],
+      "https://rukminim2.flixcart.com/image/416/416/ky7lci80/headphone/c/j/q/wf-c500-bz-in-sony-original-imagahvreyx7heq7.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/ky7lci80/headphone/h/5/q/wf-c500-bz-in-sony-original-imagahvrr9kgaxat.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/ky7lci80/headphone/y/0/b/wf-c500-bz-in-sony-original-imagahvrh4tzugwh.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/ky7lci80/headphone/3/x/c/wf-c500-bz-in-sony-original-imagahvrnxuxndya.jpeg?q=70",
+    ],
     description: `You can enjoy listening to your favourite tracks with the Sony WF-C500 Truly Wireless In-ear Earbuds. Thanks to their convenient charging case, these earbuds provide up to 20 hours of playback time. Additionally, if you're in a rush and need to charge your earbuds quickly, you can get up to an hour of extra playback time with 10 minutes of charging. They feature a compact design that fits snugly and securely in your ears. Moreover, these round-shaped earbuds have no sharp edges, making them comfortable to wear.
     Courtesy of their practical charging case, these earbuds offer you up to 20 hours of playback time. In addition, if you're in a hurry and need to juice up your earbuds quickly, you can do so in as little as 10 minutes to get up to an hour of additional playback time.    `,
   },
@@ -130,11 +130,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://rukminim2.flixcart.com/image/416/416/l2jcccw0/headphone/o/q/b/-original-imagduyfhj8ggwsq.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/l2jcccw0/headphone/2/r/p/-original-imagduyf7dumayzk.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/l2tcfbk0/headphone/0/f/j/-original-image2vgsvewwg8b.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/l2jcccw0/headphone/e/3/k/-original-imagduyfmzzmhred.jpeg?q=70"
-  ],
+      "https://rukminim2.flixcart.com/image/416/416/l2jcccw0/headphone/o/q/b/-original-imagduyfhj8ggwsq.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/l2jcccw0/headphone/2/r/p/-original-imagduyf7dumayzk.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/l2tcfbk0/headphone/0/f/j/-original-image2vgsvewwg8b.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/l2jcccw0/headphone/e/3/k/-original-imagduyfmzzmhred.jpeg?q=70",
+    ],
     description: `
     Grove into your favourite music without any inhibitions and vibe at your own space with the impressive JBL Tune 230NC TWS that is designed to set your mood ablaze with its futuristic design. These Bluetooth headphones come with 2 microphones technology that seamlessly eliminates potential noise allowing you to enjoy your favourite music. Moreover, the JBL Headphones App empowers you to customise your audio experience, locate your headphones, and find peace within. Furthermore, the JBL Tune 230NC TWS boasts a mighty battery life that lasts up to 40 hours and lets you enjoy uninterrupted music. Additionally, these headphones sport an innovative TalkThru feature that enables you to talk to your friends without having to remove the earpieces.`,
   },
@@ -150,11 +150,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/i/o/h/-original-imags36kchxetkkk.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/s/u/w/-original-imags36kpmgu9upu.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/6/a/g/-original-imags36k8uwkw3nq.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/7/u/y/-original-imags36kqgys6fg7.jpeg?q=70"
-  ],
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/i/o/h/-original-imags36kchxetkkk.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/s/u/w/-original-imags36kpmgu9upu.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/6/a/g/-original-imags36k8uwkw3nq.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/7/u/y/-original-imags36kqgys6fg7.jpeg?q=70",
+    ],
     description: `It's time to Do Your Groove, with Airdopes 161 TWS earbuds. The 10mm drivers in the earbuds are there to deliver an immersive listening time. It comes equipped with Bluetooth v5.1 wireless technology so that you can enjoy all of your sessions lag-free. The IWP tech enabled TWS earbuds power on as soon as the case lid gets opened. Moreover, the ASAP Charge tech helps the earbuds to gather up to 180Min of playtime in only 10 minutes of charging. Airdopes 161 provides a total playback time of up to 40HRS including up to 5.5HRS of playtime per earbud. With an IPX5 marked water resistant build, the earbuds offer flexibility whether you are at the gym or traversing those far terrains. You can command playback, hands-free and activate voice assistant with ease via the instant response touch controls. Now, stay indulged in your playlists and enjoy a truly immersive auditory experience on Airdopes 161.`,
   },
   {
@@ -169,11 +169,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://rukminim2.flixcart.com/image/416/416/jdj4k280/headphone/h/3/p/sony-mdr-xb55ap-original-imaf2exaczs9hxr4.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/j4d1ua80/headset/h/3/p/sony-mdr-xb55ap-original-imaevah7myygex8y.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/j4d1ua80/headset/h/3/p/sony-mdr-xb55ap-original-imaevah7wfbmxgvf.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/j4d1ua80/headset/h/3/p/sony-mdr-xb55ap-original-imaevah7b2gby32e.jpeg?q=70"
-  ],
+      "https://rukminim2.flixcart.com/image/416/416/jdj4k280/headphone/h/3/p/sony-mdr-xb55ap-original-imaf2exaczs9hxr4.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/j4d1ua80/headset/h/3/p/sony-mdr-xb55ap-original-imaevah7myygex8y.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/j4d1ua80/headset/h/3/p/sony-mdr-xb55ap-original-imaevah7wfbmxgvf.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/j4d1ua80/headset/h/3/p/sony-mdr-xb55ap-original-imaevah7b2gby32e.jpeg?q=70",
+    ],
     description: `Are you a music aficionado? Take your love for music to a whole new level with the Sony MDR-XB55AP in-ear headphones. Wherever you are, never miss important calls, thanks to the Inline Remote and Mic. Its cable features a serrated design to keep your headphones tangle-free. The 12mm drivers minimize sound distortion to deliver crisp and powerful audio.The specially designed 12 mm drivers feature a compact, lightweight design with a high sensitivity of 112 dB/mW. They deliver powerful sound by minimizing distortion even at high volumes.The Inline remote and mic let you enjoy hands-free calls. You can also switch tracks without having to touch your smartphone.
     `,
   },
@@ -189,11 +189,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/a/w/3/-original-imaghc99ae5ajfkm.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/k/c/2/-original-imaghc99kw9j5dpp.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/u/v/m/-original-imaghc99rhfmyhjg.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/p/2/d/-original-imaghc997g2xkxyd.jpeg?q=70"
-  ],
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/a/w/3/-original-imaghc99ae5ajfkm.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/k/c/2/-original-imaghc99kw9j5dpp.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/u/v/m/-original-imaghc99rhfmyhjg.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/p/2/d/-original-imaghc997g2xkxyd.jpeg?q=70",
+    ],
     description: `String`,
   },
   {
@@ -208,11 +208,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://rukminim2.flixcart.com/image/416/416/kbgu1e80/headphone/t/8/5/bassheads-228-boat-original-imafstfzcequfxnt.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/kingqkw0-0/headphone/h/y/w/bassheads-220-bassheads-200-boat-original-imafyefkjy7pczpx.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/kingqkw0-0/headphone/n/b/x/bassheads-220-bassheads-200-boat-original-imafyefk8qzqkxfz.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/kingqkw0-0/headphone/x/m/r/bassheads-220-bassheads-200-boat-original-imafyefkd9edgftm.jpeg?q=70"
-  ],
+      "https://rukminim2.flixcart.com/image/416/416/kbgu1e80/headphone/t/8/5/bassheads-228-boat-original-imafstfzcequfxnt.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/kingqkw0-0/headphone/h/y/w/bassheads-220-bassheads-200-boat-original-imafyefkjy7pczpx.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/kingqkw0-0/headphone/n/b/x/bassheads-220-bassheads-200-boat-original-imafyefk8qzqkxfz.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/kingqkw0-0/headphone/x/m/r/bassheads-220-bassheads-200-boat-original-imafyefkd9edgftm.jpeg?q=70",
+    ],
     description: `Sport these attractive earphones from boAt and let great-sounding music keep you company. Groove to your playlist, thanks to these earphones that deliver powerful bass. With tangle-free cables, you can save yourself from the hassle of detangling. Moreover, the built-in mic provides a handsfree experience. Groove to your favourite songs with this pair of in-ear wired earphones that delivers powerful bass and an immersive aural experience. For a hassle-free experience, bring home these earphones with tangle-free cables.`,
   },
   {
@@ -227,11 +227,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://rukminim2.flixcart.com/image/416/416/k3g73bk0/headphone/3/b/z/realme-buds-2-original-imafmkr2z5huapjr.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/k3g73bk0/headphone/3/b/z/realme-buds-2-original-imafmkr2e2hrzvub.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/k3g73bk0/headphone/3/b/z/realme-buds-2-original-imafmkr2fajhmqhh.jpeg?q=70", 
-    "https://rukminim2.flixcart.com/image/416/416/k3g73bk0/headphone/3/b/z/realme-buds-2-original-imafmkr2u5jpzuqb.jpeg?q=70"
-  ],
+      "https://rukminim2.flixcart.com/image/416/416/k3g73bk0/headphone/3/b/z/realme-buds-2-original-imafmkr2z5huapjr.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/k3g73bk0/headphone/3/b/z/realme-buds-2-original-imafmkr2e2hrzvub.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/k3g73bk0/headphone/3/b/z/realme-buds-2-original-imafmkr2fajhmqhh.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/416/416/k3g73bk0/headphone/3/b/z/realme-buds-2-original-imafmkr2u5jpzuqb.jpeg?q=70",
+    ],
     description: `Enhance your aural experience with this pair of REALME in-the-ear headphones. Thanks to its 9 mm Neodymium Drivers and 8 Hz–22 kHz Frequency Range, these headphones ensure powerful and balanced sound.
 
     In-line Mic for Hands-free Calling
@@ -256,11 +256,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://m.media-amazon.com/images/I/512ek05dr+L._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/61xnCuXQzbL._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/81nOPh3YPEL._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/71AJVn0qapL._SX522_.jpg"
-  ],
+      "https://m.media-amazon.com/images/I/512ek05dr+L._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/61xnCuXQzbL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/81nOPh3YPEL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/71AJVn0qapL._SX522_.jpg",
+    ],
     description: `Rockerz 330 Pro offers a massive playback time of up 60HRS on a single full charge
     This neckband has our ENx technology that helps to capture your voice without background glitches and lets you be heard crystal clear over voice calls
     With our ASAP Charge tech, the neckband can gather up to 20HRS of playtime in just 10Min of charge, Charging Time About 1 hour
@@ -283,11 +283,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://m.media-amazon.com/images/I/51Q8DUDT2eL._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/91kcPKEG-NL._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/91D78FlIBIL._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/81n1wy0yAwL._SX522_.jpg"
-  ],
+      "https://m.media-amazon.com/images/I/51Q8DUDT2eL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/91kcPKEG-NL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/91D78FlIBIL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/81n1wy0yAwL._SX522_.jpg",
+    ],
     description: `JBL Signature Sound
     Lightweight and Comfortable : The 3 sizes of ear tips (S,M,L) that are included allow you to choose a size that gives you the most comfortable listening experience even for longer listening periods
     1 year manufacturer’s warranty. Cable Length: 1.2M
@@ -309,11 +309,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://m.media-amazon.com/images/I/71rBTaUbo1L._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/713RVwAa4ML._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/619UkSZyEFL._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/61J1QZaAceL._SX522_.jpg"
-  ],
+      "https://m.media-amazon.com/images/I/71rBTaUbo1L._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/713RVwAa4ML._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/619UkSZyEFL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/61J1QZaAceL._SX522_.jpg",
+    ],
     description: `Its 40mm dynamic drivers help pump out immersive HD audio all day long
     It provides a massive battery backup of upto 15 hours for a superior playback time.
     It has been ergonomically designed and structured as an on-ear headphone to provide the best user experience with its comfortable padded earcushions and lightweight design
@@ -335,11 +335,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://m.media-amazon.com/images/I/61+VJT8U-LL._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/71Gwx8zlgBL._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/61Tm5PRIH8L._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/610Otdvfc2L._SX522_.jpg"
-  ],
+      "https://m.media-amazon.com/images/I/61+VJT8U-LL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/71Gwx8zlgBL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/61Tm5PRIH8L._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/610Otdvfc2L._SX522_.jpg",
+    ],
     description: `Hybrid ANC- Say adios to the chaos with Active Noise Cancellation feature and elevate the vibe to a whole new level of pleasure with Rockerz 551ANC, delivering up to 35dB Hybrid ANC.
     Playback-Stay connected to your playlist for mammoth durations, every day with up to 70 hours of playtime in ANC mode and up to 100 hours in normal playback mode.
     ASAP Charge-This headphone comes equipped with our ASAP Charge technology that helps it garner 10 hours of playtime in just 10 min of charge.
@@ -361,11 +361,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: true,
     isAvailable: true,
     images: [
-    "https://m.media-amazon.com/images/I/61YHhQzV+KL._SY741_.jpg", 
-    "https://m.media-amazon.com/images/I/71j4AMBqdjS._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/81LRaIY24kS._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/71sc7-yQnkS._SX522_.jpg"
-  ],
+      "https://m.media-amazon.com/images/I/61YHhQzV+KL._SY741_.jpg",
+      "https://m.media-amazon.com/images/I/71j4AMBqdjS._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/81LRaIY24kS._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/71sc7-yQnkS._SX522_.jpg",
+    ],
     description: `Digital noise cancelling: Industry leading Active Noise Cancellation (ANC) lends a personalized, virtually soundproof experience at any situation
     Voice assistant: Alexa, Google Assistant & Siri enabled (In-built) for voice access to music, information and more. Activate with a simple touch
     Speak-to-chat: Headphones use an array of smart technologies to create a seamless, hands-free listening experience. For eg, simply start speaking to automatically pause your music in Speak-to-Chat
@@ -386,11 +386,11 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     isFeatured: false,
     isAvailable: true,
     images: [
-    "https://m.media-amazon.com/images/I/51yZ8IGYlPL._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/71yDzd4ICuL._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/71bNVlJp6qL._SX522_.jpg", 
-    "https://m.media-amazon.com/images/I/81jgapDRpTL._SX522_.jpg"
-  ],
+      "https://m.media-amazon.com/images/I/51yZ8IGYlPL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/71yDzd4ICuL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/71bNVlJp6qL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/81jgapDRpTL._SX522_.jpg",
+    ],
     description: `Adaptive Noise Cancelling with Smart Ambient :Adaptive Noise Cancelling means zero distractions when it’s time to focus on your studies—or get your groove on. And if you want to hear the world around you without removing your headphones, Ambient Aware and Talk Thru sharpen the sounds of your surroundings or voices. Easily activate these Ambient Sound Control modes through the JBL Headphones app
     Bluetooth 5.3 with LE Audio (*) Wirelessly stream high-quality JBL Pure Bass Sound from your smartphone with the help of the latest Bluetooth technology. Optimize the Bluetooth performance with the Smart Audio & Video feature in the JBL Headphones app by selecting the Audio (for the best sound quality) or the Video (for an optimal gaming and video output) modes.
     JBL Pure Bass Sound:JBL Tune 770NC headphones feature the renowned JBL Pure Bass sound—the same that powers the most famous music venues all around the world.
@@ -398,22 +398,60 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     Hands-free calls with Voice aware :Easily control your sound and manage your calls from your headphones with the convenient buttons on the ear-cup. Hear your voice while you’re talking, with the help of Voice aware`,
   },
   {
-    name: "STRING",
-    title: `STRING`,
-    price: NUMBER,
+    name: "Apple Wired EarPods",
+    title: `Apple Wired EarPods with Lightning Connector`,
+    price: 1699,
+    type: "EARPHONE",
+    company: "APPLE",
+    color: "WHITE",
+    rating: 4.4,
+    ratingCount: 15941,
+    isFeatured: false,
+    isAvailable: true,
+    images: [
+      "https://m.media-amazon.com/images/I/418AP8pw3KL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/41s-4Mp3HXL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/41uIBSbhpXL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/41C3ty0leuL._SX679_.jpg",
+    ],
+    description: `String`,
+  },
+  {
+    name: "Apple AirPods Max",
+    title: `New Apple AirPods Max - Silver`,
+    price: 59990,
     type: "HEADPHONES",
-    company: "STRING",
-    color: "STRING",
-    rating: 4.5,
-    ratingCount: 4339,
+    company: "APPLE",
+    color: "WHITE",
+    rating: 4.3,
+    ratingCount: 59,
+    isFeatured: true,
+    isAvailable: true,
+    images: [
+      "https://m.media-amazon.com/images/I/81IfN-Rw8uL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81thV7SoLZL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/718DYLueB-L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/915jkZ40kSL._SX679_.jpg",
+    ],
+    description: `String`,
+  },
+  {
+    name: "JBL Tune 760NC",
+    title: `JBL Tune 760NC, Wireless Over Ear Active Noise Cancellation Headphones with Mic, up to 50 Hours Playtime, Pure Bass, Dual Pairing, AUX & Voice Assistant Support for Mobile Phones (Blue)`,
+    price: 5499,
+    type: "HEADPHONES",
+    company: "JBL",
+    color: "BLUE",
+    rating: 3.8,
+    ratingCount: 34898,
     isFeatured: false,
     isAvailable: true,
     images: [
-    "img1", 
-    "img2", 
-    "img3", 
-    "img4"
-  ],
+      "https://m.media-amazon.com/images/I/71qaMjzEWsL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/71WLUPYZ2HL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/71c-Orr0pvL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/61BIk3I89yL._SX522_.jpg",
+    ],
     description: `String`,
   },
   {
@@ -427,12 +465,7 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     ratingCount: 4339,
     isFeatured: false,
     isAvailable: true,
-    images: [
-    "img1", 
-    "img2", 
-    "img3", 
-    "img4"
-  ],
+    images: ["img1", "img2", "img3", "img4"],
     description: `String`,
   },
   {
@@ -446,12 +479,7 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     ratingCount: 4339,
     isFeatured: false,
     isAvailable: true,
-    images: [
-    "img1", 
-    "img2", 
-    "img3", 
-    "img4"
-  ],
+    images: ["img1", "img2", "img3", "img4"],
     description: `String`,
   },
   {
@@ -465,12 +493,7 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     ratingCount: 4339,
     isFeatured: false,
     isAvailable: true,
-    images: [
-    "img1", 
-    "img2", 
-    "img3", 
-    "img4"
-  ],
+    images: ["img1", "img2", "img3", "img4"],
     description: `String`,
   },
   {
@@ -484,12 +507,7 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     ratingCount: 4339,
     isFeatured: false,
     isAvailable: true,
-    images: [
-    "img1", 
-    "img2", 
-    "img3", 
-    "img4"
-  ],
+    images: ["img1", "img2", "img3", "img4"],
     description: `String`,
   },
   {
@@ -503,12 +521,7 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     ratingCount: 4339,
     isFeatured: false,
     isAvailable: true,
-    images: [
-    "img1", 
-    "img2", 
-    "img3", 
-    "img4"
-  ],
+    images: ["img1", "img2", "img3", "img4"],
     description: `String`,
   },
   {
@@ -522,12 +535,7 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     ratingCount: 4339,
     isFeatured: false,
     isAvailable: true,
-    images: [
-    "img1", 
-    "img2", 
-    "img3", 
-    "img4"
-  ],
+    images: ["img1", "img2", "img3", "img4"],
     description: `String`,
   },
   {
@@ -541,12 +549,7 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     ratingCount: 4339,
     isFeatured: false,
     isAvailable: true,
-    images: [
-    "img1", 
-    "img2", 
-    "img3", 
-    "img4"
-  ],
+    images: ["img1", "img2", "img3", "img4"],
     description: `String`,
   },
   {
@@ -560,51 +563,7 @@ Upto 40 Hours Battery Life | Fast-charging support of 10 min charging for 7 hour
     ratingCount: 4339,
     isFeatured: false,
     isAvailable: true,
-    images: [
-    "img1", 
-    "img2", 
-    "img3", 
-    "img4"
-  ],
+    images: ["img1", "img2", "img3", "img4"],
     description: `String`,
   },
-  {
-    name: "STRING",
-    title: `STRING`,
-    price: NUMBER,
-    type: "STRING",
-    company: "STRING",
-    color: "STRING",
-    rating: 4.5,
-    ratingCount: 4339,
-    isFeatured: false,
-    isAvailable: true,
-    images: [
-    "img1", 
-    "img2", 
-    "img3", 
-    "img4"
-  ],
-    description: `String`,
-  },
-  {
-    name: "STRING",
-    title: `STRING`,
-    price: NUMBER,
-    type: "STRING",
-    company: "STRING",
-    color: "STRING",
-    rating: 4.5,
-    ratingCount: 4339,
-    isFeatured: false,
-    isAvailable: true,
-    images: [
-    "img1", 
-    "img2", 
-    "img3", 
-    "img4"
-  ],
-    description: `String`,
-  },
-
 ]

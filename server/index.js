@@ -490,18 +490,8 @@ const UserCartItem = mongoose.model("UserCartItem", {
 //   }
 // )
 
-app.get("/api/product/:id", async (req, res) => {
-  const { id } = req.params
-  try {
-    const productDetails = await Product.findOne({ _id: id })
-    res.send(productDetails)
-  } catch (error) {
-    res.send({ status: "FAIL", message: error })
-  }
-})
-
 app.get("/api/products", async (req, res) => {
-  console.log("the headers are", req.headers.authorization)
+  // console.log(req.query)
   const {
     isAvailable,
     rating,
@@ -549,6 +539,16 @@ app.get("/api/products", async (req, res) => {
   } catch (error) {
     console.log("The error is:", error)
     res.send({ status: "FAIL", error })
+  }
+})
+
+app.get("/api/product/:id", async (req, res) => {
+  const { id } = req.params
+  try {
+    const productDetails = await Product.findOne({ _id: id })
+    res.send(productDetails)
+  } catch (error) {
+    res.send({ status: "FAIL", message: error })
   }
 })
 
@@ -687,11 +687,12 @@ app.post("/api/add-cart-items", async (req, res) => {
 })
 
 app.post("/api/login", async (req, res) => {
+  console.log(req.body)
   try {
     const { emailOrMobile, password } = req.body
     // console.log(emailOrMobile)
     const existingUser = await User.findOne({
-      $or: [{ email: emailOrMobile.toLowerCase() }, { mobile: emailOrMobile }],
+      $or: [{ email: emailOrMobile?.toLowerCase() }, { mobile: emailOrMobile }],
     })
     console.log(existingUser)
     if (existingUser) {
