@@ -1,7 +1,7 @@
 // import axios from "axios"
 // import Cookies from "js-cookie"
 
-// const BASE_URL = "http://localhost:4100/api"
+// const BASE_URL = "https:musicart-api.onrender.com/api"
 
 // export const callApi = async (method, url, params) => {
 //   const jwtToken = Cookies.get("jwt_token")
@@ -23,7 +23,7 @@
 
 import axios from "axios"
 
-const BASE_URL = "http://localhost:4100/api"
+const BASE_URL = "https:musicart-api.onrender.com/api"
 
 export const callApi = async (method, url, params) => {
   try {
