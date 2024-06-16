@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
-import "./home.css"
-import HeroSection from "./heroSection/HeroSection"
-import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
-import DesktopHeader from "../../components/desktopHeader/DesktopHeader"
-import ProductNavbar from "./productNavbar/ProductNavbar"
-import ProductGridItem from "./productGridItem/ProductGridItem"
-import ProductListViewItem from "./productListViewItem/ProductListViewItem"
-import { callApi } from "../../utils/callApi"
+import "./home.css";
+import HeroSection from "./heroSection/HeroSection";
+import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
+import DesktopHeader from "../../components/desktopHeader/DesktopHeader";
+import ProductNavbar from "./productNavbar/ProductNavbar";
+import ProductGridItem from "./productGridItem/ProductGridItem";
+import ProductListViewItem from "./productListViewItem/ProductListViewItem";
+import { callApi } from "../../utils/callApi";
 
 const initalDisplayConditions = {
   isAvailable: true,
@@ -18,57 +18,62 @@ const initalDisplayConditions = {
   price: { min: 0, max: Number.MAX_VALUE },
   title: "",
   sortBy: { name: 1 },
-}
+};
 
 const Home = () => {
-  const [displayListView, setDisplayListView] = useState(false)
-  const [products, setProducts] = useState([])
-  const [screenWidth, setScreenWidth] = useState(window.screen.width)
+  const [displayListView, setDisplayListView] = useState(false);
+  const [products, setProducts] = useState([]);
+  const [screenWidth, setScreenWidth] = useState(window.screen.width);
+  const [isProductLoading, setIsProductLoading] = useState(false);
   const [displayConditions, setDisplayConditions] = useState(
     initalDisplayConditions
-  )
+  );
 
   useEffect(() => {
-    ;(async () => {
+    (async () => {
       try {
-        const url = "/products"
-        const featuredProducts = await callApi("GET", url, displayConditions)
+        setIsProductLoading(true);
+        const url = "/products";
+        const featuredProducts = await callApi("GET", url, displayConditions);
         // console.log({ featuredProducts })
-        setProducts(featuredProducts)
+        setProducts(featuredProducts);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-    })()
-  }, [])
+      setIsProductLoading(false);
+    })();
+  }, []);
 
   useEffect(() => {
-    ;(async () => {
+    (async () => {
       try {
-        const url = "/products"
-        const featuredProducts = await callApi("GET", url, displayConditions)
+        setIsProductLoading(true);
+        const url = "/products";
+        const featuredProducts = await callApi("GET", url, displayConditions);
         // console.log({ featuredProducts })
-        setProducts(featuredProducts)
+        setProducts(featuredProducts);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-    })()
-  }, [displayConditions])
+      setIsProductLoading(false);
+    })();
+  }, [displayConditions]);
 
   useEffect(() => {
     const updateWidth = () => {
-      setScreenWidth(window.innerWidth)
-    }
+      setScreenWidth(window.innerWidth);
+    };
 
-    window.addEventListener("resize", updateWidth)
+    window.addEventListener("resize", updateWidth);
 
     if (screenWidth < 1024) {
-      setDisplayListView(false)
+      setDisplayListView(false);
     }
 
     return () => {
-      window.removeEventListener("resize", updateWidth)
-    }
-  }, [screenWidth])
+      window.removeEventListener("resize", updateWidth);
+    };
+  }, [screenWidth]);
 
   // console.log({ displayConditions })
 
@@ -83,36 +88,46 @@ const Home = () => {
             setDisplayListView={setDisplayListView}
           />
         </div>
-        {products.length > 0 ? (
+        {isProductLoading ? (
+          <div className="loading-parent">
+            <p>Loading...</p>
+          </div>
+        ) : (
           <>
-            {displayListView ? (
-              <ul className="product-list-view-ul-container">
-                {products?.map((eachProduct) => (
-                  <ProductListViewItem
-                    productItem={eachProduct}
-                    key={eachProduct.id}
-                  />
-                ))}
-              </ul>
+            {products.length > 0 ? (
+              <>
+                {displayListView ? (
+                  <ul className="product-list-view-ul-container">
+                    {products?.map((eachProduct) => (
+                      <ProductListViewItem
+                        productItem={eachProduct}
+                        key={eachProduct.id}
+                      />
+                    ))}
+                  </ul>
+                ) : (
+                  <ul className="product-grid-view-ul-container">
+                    {products?.map((eachProduct) => (
+                      <ProductGridItem
+                        productItem={eachProduct}
+                        key={eachProduct.id}
+                      />
+                    ))}
+                  </ul>
+                )}
+              </>
             ) : (
-              <ul className="product-grid-view-ul-container">
-                {products?.map((eachProduct) => (
-                  <ProductGridItem
-                    productItem={eachProduct}
-                    key={eachProduct.id}
-                  />
-                ))}
-              </ul>
+              <div className="loading-parent">
+                <h1>No Products Found</h1>
+              </div>
             )}
           </>
-        ) : (
-          <h1>No Products Found</h1>
         )}
       </ContentWrapper>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
 
 /* products = [tittle, price, rating, ratingCount, type, brand, color, isFeatured, extendedTitle, description, tagline, isAvailable, images:[]] */

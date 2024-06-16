@@ -18,7 +18,7 @@ const ProductNavbar = ({ setDisplayConditions, setDisplayListView }) => {
         ...prevState,
         title: e.target.value,
       }));
-    }, 500);
+    }, 300);
     setTimerId(timerId);
   };
 
