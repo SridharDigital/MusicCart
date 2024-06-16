@@ -1,81 +1,80 @@
-import { Link, Navigate } from "react-router-dom"
-import { useState } from "react"
+import { Link, Navigate } from "react-router-dom";
+import { useState } from "react";
 
-import { useSelector, useDispatch } from "react-redux"
-import { loginUser } from "../../store/userSlice"
+import { useSelector, useDispatch } from "react-redux";
+import { loginUser } from "../../store/userSlice";
 
-import "./login.css"
-import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
-import Logo from "../../components/logo/Logo"
-import { callApi } from "../../utils/callApi"
+import "./login.css";
+import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
+import Logo from "../../components/logo/Logo";
+import { callApi } from "../../utils/callApi";
 
-const initialUserValues = { emailOrMobile: "", password: "" }
+const initialUserValues = { emailOrMobile: "", password: "" };
 
 const Login = () => {
-  const [user, setUser] = useState(initialUserValues)
-  const [errors, setErrors] = useState({})
-  const isUserLoggedIn = useSelector((state) => state.user.isUserLoggedIn)
+  const [user, setUser] = useState(initialUserValues);
+  const [errors, setErrors] = useState({});
+  const isUserLoggedIn = useSelector((state) => state.user.isUserLoggedIn);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   if (isUserLoggedIn) {
-    return <Navigate to="/" />
+    return <Navigate to="/" />;
   }
 
   const handleOnInput = (event) => {
     setUser((prevUsers) => ({
       ...prevUsers,
       [event.target.name]: event.target.value,
-    }))
-  }
+    }));
+  };
 
   const handleBlur = (event) => {
     if (event.target.value === "") {
       setErrors((prevErrors) => ({
         ...prevErrors,
         [event.target.name]: "Field cannot be empty",
-      }))
+      }));
     } else {
       setErrors((prevErrors) => ({
         ...prevErrors,
         [event.target.name]: false,
-      }))
+      }));
     }
-  }
+  };
 
   const handleForm = async (event) => {
-    setErrors({})
-    event.preventDefault()
-    const isValidationSuccess = validateForm()
+    setErrors({});
+    event.preventDefault();
+    const isValidationSuccess = validateForm();
     if (isValidationSuccess) {
-      const response = await callApi("POST", "/login", user)
-      console.log(response)
-
-      setUser(initialUserValues)
+      const response = await callApi("POST", "/auth/login", user);
+      // console.log(response);
       if (response.status === "FAIL") {
-        setErrors({ apiError: response.message })
+        setErrors({ apiError: response.message });
       } else {
-        dispatch(loginUser(response.data))
-        console.log("navigation executed")
-        return <Navigate to="/" />
+        setUser(initialUserValues);
+        dispatch(loginUser(response.data));
+        // console.log("navigation executed");
+        return <Navigate to="/" />;
       }
     }
-  }
+  };
 
   const validateForm = () => {
-    let isValidationSuccess = true
-    const userInputFields = Object.keys(user)
+    let isValidationSuccess = true;
+    const userInputFields = Object.keys(user);
     userInputFields.map((eachField) => {
       if (!user[eachField]) {
-        isValidationSuccess = false
+        isValidationSuccess = false;
         setErrors((prevErrors) => ({
           ...prevErrors,
           [eachField]: "Field cannot be empty",
-        }))
+        }));
       }
-    })
-    return isValidationSuccess
-  }
+    });
+    return isValidationSuccess;
+  };
 
   return (
     <>
@@ -159,7 +158,7 @@ const Login = () => {
         </div>
       </ContentWrapper>
     </>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

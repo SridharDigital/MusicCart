@@ -1,82 +1,91 @@
-import { Link, useNavigate, Navigate } from "react-router-dom"
-import { useState } from "react"
-import { callApi } from "../../utils/callApi"
-import { useSelector, useDispatch } from "react-redux"
-import { loginUser } from "../../store/userSlice"
+import { Link, useNavigate, Navigate } from "react-router-dom";
+import { useState } from "react";
+import { callApi } from "../../utils/callApi";
+import { useSelector, useDispatch } from "react-redux";
+import { loginUser } from "../../store/userSlice";
 
-import "./signup.css"
-import Logo from "../../components/logo/Logo"
-import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
+import "./signup.css";
+import Logo from "../../components/logo/Logo";
+import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 
-const initialUserValues = { name: "", mobile: "", email: "", password: "" }
+const initialUserValues = { name: "", mobile: "", email: "", password: "" };
 
 const Signup = () => {
-  const [user, setUser] = useState(initialUserValues)
-  const [errors, setErrors] = useState({})
-  const isUserLoggedIn = useSelector((state) => state.user.isUserLoggedIn)
+  const [user, setUser] = useState(initialUserValues);
+  const [errors, setErrors] = useState({});
+  const isUserLoggedIn = useSelector((state) => state.user.isUserLoggedIn);
 
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   if (isUserLoggedIn) {
-    return <Navigate to="/" />
+    return <Navigate to="/" />;
   }
+
+  const handleMobileNum = (event) => {
+    if (event.key === "Backspace" && user.mobile.length > 0) {
+      event.preventDefault();
+      setUser((prevUser) => ({
+        ...prevUser,
+        mobile: prevUser.mobile.slice(0, -1),
+      }));
+    }
+  };
 
   const handleOnInput = (event) => {
     if (event.target.name === "mobile" && user.mobile.length >= 10) {
-      return
+      // console.log("Limit reached");
     } else {
-      setUser((prevUsers) => ({
-        ...prevUsers,
+      setUser((prevUser) => ({
+        ...prevUser,
         [event.target.name]: event.target.value,
-      }))
+      }));
     }
-  }
+  };
 
   const handleBlur = (event) => {
     if (event.target.value === "") {
       setErrors((prevErrors) => ({
         ...prevErrors,
         [event.target.name]: "Field cannot be empty",
-      }))
+      }));
     } else {
       setErrors((prevErrors) => ({
         ...prevErrors,
         [event.target.name]: false,
-      }))
+      }));
     }
-  }
+  };
 
   const handleForm = async (event) => {
-    event.preventDefault()
-    setErrors({})
-    const isValidationSuccess = validateForm()
+    event.preventDefault();
+    setErrors({});
+    const isValidationSuccess = validateForm();
     if (isValidationSuccess) {
-      const response = await callApi("POST", "/signup", user)
-      setUser(initialUserValues)
+      const response = await callApi("POST", "/signup", user);
       if (response.status === "FAIL") {
-        setErrors({ apiError: response.message })
+        setErrors({ apiError: response.message });
       } else {
-        dispatch(loginUser(response.data))
-        navigate("/")
+        dispatch(loginUser(response.data));
+        navigate("/");
       }
     }
-  }
+  };
 
   const validateForm = () => {
-    let isValidationSuccess = true
-    const userInputFields = Object.keys(user)
+    let isValidationSuccess = true;
+    const userInputFields = Object.keys(user);
     userInputFields.map((eachField) => {
       if (!user[eachField]) {
-        isValidationSuccess = false
+        isValidationSuccess = false;
         setErrors((prevErrors) => ({
           ...prevErrors,
           [eachField]: "Field cannot be empty",
-        }))
+        }));
       }
-    })
-    return isValidationSuccess
-  }
+    });
+    return isValidationSuccess;
+  };
 
   return (
     <>
@@ -122,6 +131,7 @@ const Signup = () => {
               id="mobile"
               className="input-bar"
               value={user.mobile}
+              onKeyDown={handleMobileNum}
               onInput={handleOnInput}
               onBlur={handleBlur}
             />
@@ -185,7 +195,7 @@ const Signup = () => {
         </div>
       </ContentWrapper>
     </>
-  )
-}
+  );
+};
 
-export default Signup
+export default Signup;
