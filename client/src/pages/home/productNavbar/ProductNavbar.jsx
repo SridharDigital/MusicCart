@@ -9,15 +9,24 @@ import { callApi } from "../../../utils/callApi";
 
 const ProductNavbar = ({ setDisplayConditions, setDisplayListView }) => {
   const [taxonomies, setTaxonomiesx] = useState();
+  const [timerId, setTimerId] = useState(null);
 
   const handleSearch = (e) => {
-    if (e.key === "Enter") {
+    console.log("dfg");
+    const timerId = setTimeout(() => {
       setDisplayConditions((prevState) => ({
         ...prevState,
         title: e.target.value,
       }));
-    }
+    }, 500);
+    setTimerId(timerId);
   };
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [timerId]);
 
   const onSelectSort = (e) => {
     setDisplayConditions((prevState) => ({
@@ -47,7 +56,7 @@ const ProductNavbar = ({ setDisplayConditions, setDisplayListView }) => {
           type="search"
           className="desktop-search-input-bar"
           placeholder="Search Product"
-          onKeyDown={handleSearch}
+          onChange={handleSearch}
         />
       </div>
       <div className="product-filter-and-sort-container">
