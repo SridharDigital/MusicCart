@@ -20,7 +20,7 @@ const Navbar = ({ displaySearchBarinMobile, history }) => {
     hideDesktopNavbar = true
   }
 
-  console.log("The user Id is", userId)
+  // console.log("The user Id is", userId)
 
   const desktopNavbar = () => {
     return (

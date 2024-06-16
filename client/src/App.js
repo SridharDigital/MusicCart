@@ -1,20 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { store } from "./store/store"
-import { Provider } from "react-redux"
+import { store } from "./store/store";
+import { Provider } from "react-redux";
 
-import "./App.css"
-import ProtectedRoute from "./utils/ProtectedRoute"
-import Navbar from "./components/navbar/Navbar"
-import FooterNavbar from "./components/footerNavbar/FooterNavbar"
-import Home from "./pages/home/Home"
-import Login from "./pages/login/Login"
-import Signup from "./pages/signup/Signup"
-import ProductDetails from "./pages/productDetails/ProductDetails"
-import Cart from "./pages/cart/Cart"
-import Checkout from "./pages/checkout/Checkout"
-import OrderSuccess from "./pages/orderSuccess/OrderSuccess"
-import NotFound from "./pages/notFound/NotFound"
+import "./App.css";
+import ProtectedRoute from "./utils/ProtectedRoute";
+import Navbar from "./components/navbar/Navbar";
+import FooterNavbar from "./components/footerNavbar/FooterNavbar";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import Signup from "./pages/signup/Signup";
+import ProductDetails from "./pages/productDetails/ProductDetails";
+import Cart from "./pages/cart/Cart";
+import Checkout from "./pages/checkout/Checkout";
+import OrderSuccess from "./pages/orderSuccess/OrderSuccess";
+import NotFound from "./pages/notFound/NotFound";
 
 const App = () => {
   return (
@@ -48,7 +48,7 @@ const App = () => {
         <FooterNavbar />
       </BrowserRouter>
     </Provider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

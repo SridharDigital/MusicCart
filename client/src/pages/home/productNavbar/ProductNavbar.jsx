@@ -1,46 +1,43 @@
-import { useState, useEffect } from "react"
-import "./productNavbar.css"
-import searchIcon from "../../../assets/searchIcon.svg"
-import gridIcon from "../../../assets/gridIcon.svg"
-import listIcon from "../../../assets/listIcon.svg"
-import { sortItems } from "../../../constants/constants"
-import TaxonomyItem from "./taxonomyItem/TaxonomyItem"
-import { callApi } from "../../../utils/callApi"
+import { useState, useEffect } from "react";
+import "./productNavbar.css";
+import searchIcon from "../../../assets/searchIcon.svg";
+import gridIcon from "../../../assets/gridIcon.svg";
+import listIcon from "../../../assets/listIcon.svg";
+import { sortItems } from "../../../constants/constants";
+import TaxonomyItem from "./taxonomyItem/TaxonomyItem";
+import { callApi } from "../../../utils/callApi";
 
 const ProductNavbar = ({ setDisplayConditions, setDisplayListView }) => {
-  const [taxonomies, setTaxonomiesx] = useState()
+  const [taxonomies, setTaxonomiesx] = useState();
 
   const handleSearch = (e) => {
-    console.log(e.target.value)
     if (e.key === "Enter") {
       setDisplayConditions((prevState) => ({
         ...prevState,
         title: e.target.value,
-      }))
+      }));
     }
-  }
+  };
 
   const onSelectSort = (e) => {
-    console.log(e.target.value.charAt(0))
     setDisplayConditions((prevState) => ({
       ...prevState,
       sortBy: {
         [e.target.value.slice(1)]: e.target.value.charAt(0) == 0 ? -1 : 1,
       },
-    }))
-  }
+    }));
+  };
 
   useEffect(() => {
-    ;(async () => {
+    (async () => {
       try {
-        const taxonomyRes = await callApi("GET", "/get-filter-options")
-        setTaxonomiesx(taxonomyRes)
-        console.log({ taxonomyRes })
+        const taxonomyRes = await callApi("GET", "/products/filter-options");
+        setTaxonomiesx(taxonomyRes);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-    })()
-  }, [])
+    })();
+  }, []);
 
   return (
     <div className="product-navbar-container">
@@ -107,7 +104,7 @@ const ProductNavbar = ({ setDisplayConditions, setDisplayListView }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductNavbar
+export default ProductNavbar;

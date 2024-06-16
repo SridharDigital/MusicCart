@@ -39,12 +39,12 @@ const Cart = () => {
 
   const dispatch = useDispatch()
 
-  console.log(userId)
+  // console.log(userId)
   useEffect(() => {
     ;(async () => {
       const cartItems = await getCartItems(userId)
-      console.log("The cart Item fetching is executed")
-      console.log(cartItems)
+      // console.log("The cart Item fetching is executed")
+      // console.log(cartItems)
       setCartItems(cartItems)
     })()
   }, [])

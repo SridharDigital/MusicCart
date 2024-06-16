@@ -4,8 +4,6 @@ const TaxonomyItem = ({ taxonomyItem, setDisplayConditions }) => {
   const { items, displayText } = taxonomyItem
   const onSelectTaxonomy = (e) => {
     let price = { min: 0, max: Number.MAX_VALUE }
-    console.log(taxonomyItem)
-    console.log(e.target.value)
 
     // if (taxonomyItem.id === "price") {
     //   switch (e.target.value) {

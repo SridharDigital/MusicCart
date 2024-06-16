@@ -30,7 +30,7 @@ const MobileFooterNavbar = () => {
     dispatch(logoutUser())
   }
 
-  console.log("the current user status is = ", isUserLoggedIn)
+  // console.log("the current user status is = ", isUserLoggedIn)
   return (
     <>
       {!hideMobileFooterNavbar && (

@@ -1,34 +1,54 @@
-import { useLocation, Link } from "react-router-dom"
-import { useEffect, useState } from "react"
-import Rating from "react-rating"
+import { useLocation, Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Rating from "react-rating";
 
-import "./productDetails.css"
-import leftArrow from "../../assets/leftArrow.svg"
-import goldenStar from "../../assets/goldenStar.svg"
-import emptyStar from "../../assets/emptyStar.svg"
-import { callApi } from "../../utils/callApi"
-import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
-import DesktopHeader from "../../components/desktopHeader/DesktopHeader"
-import ProductImageCarousel from "./productImageCarousel/ProductImageCarousel"
+import "./productDetails.css";
+import leftArrow from "../../assets/leftArrow.svg";
+import goldenStar from "../../assets/goldenStar.svg";
+import emptyStar from "../../assets/emptyStar.svg";
+import { callApi } from "../../utils/callApi";
+import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
+import DesktopHeader from "../../components/desktopHeader/DesktopHeader";
+import ProductImageCarousel from "./productImageCarousel/ProductImageCarousel";
+import { useSelector } from "react-redux";
+import Cookies from "js-cookie";
+import { addToCart } from "../../utils/addToCart";
 
 const ProductDetails = (props) => {
-  const [productDetails, setProductDetails] = useState({})
-  const location = useLocation()
+  const [productDetails, setProductDetails] = useState({});
+  const userId = useSelector((state) => state.user.userId);
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const fetchProductDetails = async () => {
     try {
-      const url = location.pathname
-      const productDetails = await callApi("GET", url)
-      console.log({ productDetails })
-      setProductDetails(productDetails)
+      const paths = location.pathname.split("/");
+      const productId = paths[[paths.length - 1]];
+      const productDetails = await callApi(
+        "GET",
+        "/products/details/" + productId
+      );
+      // console.log({ productDetails })
+      setProductDetails(productDetails);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
+
+  const onClickAddToCart = async () => {
+    if (!userId) {
+      return navigate("/login");
+    }
+    const status = await addToCart(userId, productDetails._id);
+    if (status) {
+      navigate("/cart");
+    }
+  };
 
   useEffect(() => {
-    fetchProductDetails()
-  }, [])
+    fetchProductDetails();
+  }, []);
 
   return (
     <>
@@ -102,11 +122,12 @@ const ProductDetails = (props) => {
                 {productDetails.company}
               </span>
             </p>
-            <Link to="/cart" style={{ textDecoration: "none" }}>
-              <button className="product-details-add-to-cart-btn">
-                Add to cart
-              </button>
-            </Link>
+            <button
+              className="product-details-add-to-cart-btn"
+              onClick={onClickAddToCart}
+            >
+              Add to cart
+            </button>
             <br />
             <Link to="/cart" style={{ textDecoration: "none" }}>
               <button className="product-details-buy-now-btn">Buy Now</button>
@@ -115,7 +136,7 @@ const ProductDetails = (props) => {
         </div>
       </ContentWrapper>
     </>
-  )
-}
+  );
+};
 
-export default ProductDetails
+export default ProductDetails;

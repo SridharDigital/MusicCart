@@ -1,23 +1,24 @@
-import "./productGridItem.css"
-import { Link, useNavigate } from "react-router-dom"
-import cartIcon from "../../../assets/cartIcon.svg"
-import { callApi } from "../../../utils/callApi"
-import { UseSelector, useSelector } from "react-redux"
+import "./productGridItem.css";
+import { Link, useNavigate } from "react-router-dom";
+import cartIcon from "../../../assets/cartIcon.svg";
+import { callApi } from "../../../utils/callApi";
+import { UseSelector, useSelector } from "react-redux";
+import Cookies from "js-cookie";
+import { addToCart } from "../../../utils/addToCart";
 
 const ProductGridItem = ({ productItem }) => {
-  const userId = useSelector((state) => state.user.userId)
-  const navigate = useNavigate()
+  const userId = useSelector((state) => state.user.userId);
+  const navigate = useNavigate();
   const onClickAddToCart = async () => {
-    console.log("add to cart user id is ", userId)
     if (!userId) {
-      return navigate("/login")
+      return navigate("/login");
     }
-    const response = await callApi("POST", "/add-cart-items", {
-      userId,
-      productId: productItem.id,
-    })
-  }
-  // console.log(productItem)
+    const status = await addToCart(userId, productItem.id);
+    if (status) {
+      navigate("/cart");
+    }
+  };
+
   return (
     <li className="product-grid-li-container">
       <div className="img-bg-container">
@@ -58,7 +59,7 @@ const ProductGridItem = ({ productItem }) => {
       </Link>
       {/* </Link> */}
     </li>
-  )
-}
+  );
+};
 
-export default ProductGridItem
+export default ProductGridItem;

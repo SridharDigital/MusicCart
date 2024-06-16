@@ -33,7 +33,7 @@ const Home = () => {
       try {
         const url = "/products"
         const featuredProducts = await callApi("GET", url, displayConditions)
-        console.log({ featuredProducts })
+        // console.log({ featuredProducts })
         setProducts(featuredProducts)
       } catch (error) {
         console.log(error)
@@ -46,7 +46,7 @@ const Home = () => {
       try {
         const url = "/products"
         const featuredProducts = await callApi("GET", url, displayConditions)
-        console.log({ featuredProducts })
+        // console.log({ featuredProducts })
         setProducts(featuredProducts)
       } catch (error) {
         console.log(error)
@@ -70,7 +70,7 @@ const Home = () => {
     }
   }, [screenWidth])
 
-  console.log({ displayConditions })
+  // console.log({ displayConditions })
 
   return (
     <>

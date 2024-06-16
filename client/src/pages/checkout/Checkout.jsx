@@ -33,7 +33,7 @@ const convenienceFee = 45
 // const totalAmount = 3545
 const discount = 0
 const totalNoOfItems = 1
-console.log(validateUserLoggedin())
+// console.log(validateUserLoggedin())
 
 const Checkout = () => {
   const [cartItems, setCartItems] = useState([])
@@ -44,8 +44,8 @@ const Checkout = () => {
   useEffect(() => {
     ;(async () => {
       const cartItems = await getCartItems(userId)
-      console.log("The cart Item fetching is executed")
-      console.log(cartItems)
+      // console.log("The cart Item fetching is executed")
+      // console.log(cartItems)
       setCartItems(cartItems)
     })()
   }, [])
